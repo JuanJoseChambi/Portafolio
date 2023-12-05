@@ -8,7 +8,9 @@ function Nav() {
             <img src={Logo} alt="Juan Jose Ch" className="w-full"/>
         </a>
 
-        <ul className="flex justify-between items-center space-x-5 font-light text-xs">
+        <button className="block md:hidden text-2xl"><i className='bx bx-menu'></i></button>
+        
+        <ul className="hidden md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs">
             <li>SOBRE MI</li>
             <li>PROYECTOS</li>
             <li>HABILIDADES</li>

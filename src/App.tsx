@@ -8,7 +8,7 @@ function App() {
     <>
       <Nav/>
       <Header/>
-      <Main/>
+      {/* <Main/> */}
       {/* <Footer/> */}
     </>
   )
