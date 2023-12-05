@@ -19,7 +19,7 @@ function Main() {
         <section className="area flex justify-around items-center bg-redd-500 ">
 
           <picture className="w-96 relative flex justify-center items-center ">
-            <div className={`absolute w-full h-full rounded-full transition-all duration-500 ${image ? "bg-[#D9D9D9] shadow-[0px_0px_100px_10px_#40404062]" : "bg-neutral-700 shadow-[0px_0px_10px_5px_#404040]"} `}></div>
+            <div className={`absolute w-full h-full rounded-full transition-all duration-500 ${image ? "bg-neutral-700 shadow-[0px_0px_10px_5px_#404040]" : "bg-[#D9D9D9] shadow-[0px_0px_100px_10px_#40404062]"} `}></div>
             <img src={sombra} alt="" className={`rounded-full z-10 scale-125 drop-shadow-[10px_20px_10px_black] transition-all duration-500 `} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}/>
           </picture>
 
