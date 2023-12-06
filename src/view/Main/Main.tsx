@@ -1,3 +1,5 @@
+import Educacion from "./Educacion"
+import Proyectos from "./Proyectos"
 import SobreMi from "./SobreMi"
 
 function Main() {
@@ -6,7 +8,8 @@ function Main() {
   return (
     <main className="">
         <SobreMi/>
-        
+        <Educacion/>
+        <Proyectos/>
     </main>
   )
 }
