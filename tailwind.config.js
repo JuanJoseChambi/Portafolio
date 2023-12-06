@@ -17,7 +17,16 @@ export default {
       },
       maxHeight:{
         "xl":"630px"
+      },
+      letterSpacing: {
+        "spacing  ": "10px"
+      },
+      screens: {
+        "medium":"824px"
       }
+      // fontSize: {
+        // "smx":"12.5px"
+      // }
     },
   },
   plugins: [],
