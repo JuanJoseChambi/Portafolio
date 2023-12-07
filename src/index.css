@@ -8,11 +8,20 @@
     .area {
         @apply max-w-screen-xl w-[95%] mx-auto 
     }
-    .proyectos {
+    .proyectos-medium {
         grid-template-areas: 
         "bigTopLeft minTopCenter bigTopRight"
         "bigTopLeft bigBotCenter bigTopRight"
         "bigTopLeft bigBotCenter minBotRight"
+        ;
+    }
+    .proyectos {
+        grid-template-areas: 
+        "bigTopLeft"
+        "minTopCenter"
+        "bigTopRight"
+        "bigBotCenter"
+        "minBotRight"
         ;
     }
 }
