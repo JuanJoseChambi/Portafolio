@@ -8,26 +8,26 @@ function Proyectos() {
   return (
     <section className='bg-[#dcd9d9]'>
       <section className='area min-h-xl flex justify-center items-center'>
-        <section className="w-[900px] h-[500px] my-20 grid grid-cols-3 grid-rows-3 gap-1 proyectos bg-redd-500">
+        <section className="w-[900px] h-[500px] my-20 grid grid-cols-3 grid-rows-3 gap-3 proyectos bg-redd-500">
 
-          <picture className="border-solid overflow-hidden border-black border  bg-blue-500 [grid-area:bigTopLeft]">
+          <picture className="rounded-xl overflow-hidden shadow-[0px_0px_35px_2px_black] border [grid-area:bigTopLeft]">
             <img src={JCDV} alt="" />
           </picture>
-          <article className="border-solid overflow-hidden border-black border  bg-blue-500 [grid-area:minTopCenter]">
-            <img src={RecipeFood} alt="" />
-          </article>
-          <article className="border-solid overflow-hidden border-black border  bg-blue-500 [grid-area:bigTopRight]">
-            <img src={MMarket} alt="" />
-          </article>
+          <picture className="rounded-xl overflow-hidden shadow-[0px_0px_35px_2px_black] border [grid-area:minTopCenter]">
+            <img src={RecipeFood} alt="" className="h-full"/>
+          </picture>
+          <picture className="flex justify-end items-end rounded-xl overflow-hidden shadow-[0px_0px_35px_2px_black] border [grid-area:bigTopRight]">
+            <img src={JCDV} alt="" className=""/>
+          </picture>
           {/* <article className="border-solid border-black border  bg-blue-500 [grid-area:minBotLeft]">
             Holaf
           </article> */}
-          <article className="border-solid overflow-hidden border-black border  bg-blue-500 [grid-area:bigBotCenter]">
+          <picture className="rounded-xl overflow-hidden shadow-[0px_0px_35px_2px_black] border [grid-area:bigBotCenter]">
             <img src={Tn} alt="" />
-          </article>
-          <article className="border-solid overflow-hidden border-black border  bg-blue-500 [grid-area:minBotRight]">
-            <img src={MMarket} alt="" />
-          </article>
+          </picture>
+          <picture className="rounded-xl overflow-hidden shadow-[0px_0px_35px_2px_black] border [grid-area:minBotRight]">
+            <img src={MMarket} alt="" className="h-full" />
+          </picture>
 
         </section>
       </section>
