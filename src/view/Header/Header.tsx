@@ -7,6 +7,7 @@ function Header() {
         <section className="area flex flex-col md:flex-row justify-between items-center space-y-10 relative bg-redd-500">
 
           <article className="bg-limee-500">
+            
             <p className="font-semibold tracking-widest mx-16 text-neutral-700">SOY</p>
             <article className="relative bg-limee-500 grid place-items-center">
               <h2 className="text-8xl text-center text-[#adadad8c] select-none">JUAN JOSE CHAMBI</h2>
@@ -14,7 +15,6 @@ function Header() {
             </article>
             <h1 className="font-semibold tracking-widest w-full text-end text-neutral-700">DESARROLLADOR FRONTEND<br></br>FULLSTACK</h1>
 
-            {/* <p>Soy Juan Jose Chambi, desarrollador Fullstack</p> */}
           </article>
 
 

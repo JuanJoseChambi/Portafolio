@@ -12,8 +12,8 @@ function Nav() {
         
         <ul className="hidden text-white md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs">
             <li className="cursor-pointer">SOBRE MI</li>
-            <li className="cursor-pointer">HABILIDADES</li>
             <li className="cursor-pointer">PROYECTOS</li>
+            <li className="cursor-pointer">HABILIDADES</li>
             <li className="cursor-pointer">SERVICIOS</li>
             <li className="cursor-pointer">CONTACTO</li>
         </ul>
