@@ -12,6 +12,9 @@ export default {
       height:{
         "xl":"630px"
       },
+      width: {
+        "almostFull": "90%"
+      },
       minHeight:{
         "xl":"630px"
       },
@@ -19,7 +22,7 @@ export default {
         "xl":"630px"
       },
       letterSpacing: {
-        "spacing  ": "10px"
+        "spacing": "10px"
       },
       screens: {
         "medium":"824px"
