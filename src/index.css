@@ -8,7 +8,16 @@
     .area {
         @apply max-w-screen-xl w-[95%] mx-auto 
     }
+    .proyectos {
+        grid-template-areas: 
+        "bigTopLeft minTopCenter bigTopRight"
+        "bigTopLeft bigBotCenter bigTopRight"
+        "bigTopLeft bigBotCenter minBotRight"
+        ;
+    }
 }
+
+
 body{
     overflow-x: hidden;
 }
