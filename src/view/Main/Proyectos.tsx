@@ -36,18 +36,18 @@ function Proyectos() {
       <section className='area min-h-xl flex flex-col justify-center items-center pb-28 pt-20 space-y-24'>
 
         <article className="relative flex justify-center items-end">
-          <h2 className="text-8xl text-start bg-greenn-500 text-[#adadad] select-none">PROYECTOS</h2>
+          <h2 className="text-7xl sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">PROYECTOS</h2>
           <h2 className="absolute text-5xl text-neutral-800 font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">PROYECTOS</h2>
         </article>
 
         {infoProyect 
-        ? <section className="w-[95%] h-[500px] relative flex justify-between items-center bg-redd-500">
-            <section className="w-[55%] h-[50%] flex flex-col justify-between items-center bg-limee-500">
+        ? <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500">
 
-              <article className="space-y-5 w-full">
+            <i onClick={() => setInfoProyect(null)} className='absolute top-0 right-0 lg:top-28 lg:left-0 text-3xl cursor-pointer text-violet  bx bx-x-circle'></i>
+            <section className="w-almostFull lg:w-[55%] h-[200px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limed-500">
 
-                <article>
-                  <article className="flex justify-between items-center ">
+                <article className="w-full bg-liem-500">
+                  <article className="relative flex justify-between items-center ">
                     <h2 className="text-2xl font-semibold tracking-widest">{infoProyect.titulo}</h2>
                     <ul className="flex justify-center items-center space-x-5">
                       <li>
@@ -65,14 +65,14 @@ function Proyectos() {
                   <p className="text-xs">{infoProyect.fecha}</p>
                 </article>
                 <p className="font-light text-sm">{infoProyect.descripcion}</p>
-              </article>
 
             </section>
 
-            <section className="w-[40%] h-full bg-blued-500 grid grid-cols-3 grid-rows-3">
+            <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500">
 
-              <section className="w-[80%] h-[80%] rounded-sm grid place-self-end place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
-                <h2 className="text-xl text-center tracking-spacing text-white"> {
+              <section className="hidden sm:grid w-[80%] h-[80%] rounded-sm place-self-end sm:place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
+                <h2 className="text-xl text-center tracking-spacing text-white"> 
+                {
                   (() => {
                     const nombre = infoProyect.titulo.toUpperCase().split("");
                     const primeraLetra = nombre[0].toString()
@@ -84,16 +84,17 @@ function Proyectos() {
                     );
                   })() // Llamamos a la función aquí para obtener su resultado
 
-                }</h2>
+                }
+                </h2>
               </section>
 
-              <picture className="grid place-content-start max-w-[450px] min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-3 row-start-1 row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500">
-                  <img src={infoProyect.image} alt="" className=" object-cover"/>
+              <picture className="grid place-content-start min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-4 sm:col-end-3 row-start-1 row-end-4 sm:row-end-3 shadow-[-15px_15px_35px_0_black] bg-purple-500">
+                  <img src={infoProyect.image} alt="" className="object-cover"/>
               </picture>
 
             </section>
             
-            <i onClick={() => setInfoProyect(null)} className='absolute top-20 left-0 cursor-pointer text-2xl text-violet bx bx-x-circle'></i>
+            
 
           </section> 
         : <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
