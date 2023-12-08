@@ -19,10 +19,10 @@ interface proyects {
 function Proyectos() {  
 
   const [proyects, setProyects] = useState <proyects[]>([
-    {titulo:"Jesus Camino de Vida", fecha:"20 - jul - 20 Dic - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:JCDV, gridArea:"bigTopLeft", descripcion:""},
-    {titulo:"Recipe Food", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:RecipeFood, gridArea:"minTopCenter", short:true, descripcion:""},
-    {titulo:"IJCDV", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:JCDV, gridArea:"bigTopRight", descripcion:""},
-    {titulo:"TN", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:Tn, gridArea:"bigBotCenter", short:true, descripcion:""},
+    {titulo:"Jesus Camino de Vida", fecha:"20 - jul - 20 Dic - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:JCDV, gridArea:"bigTopLeft", descripcion:"sssss"},
+    {titulo:"Recipe Food", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:RecipeFood, gridArea:"minTopCenter", short:true, descripcion:"sss"},
+    {titulo:"IJCDV", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:JCDV, gridArea:"bigTopRight", descripcion:"sss"},
+    {titulo:"TN", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:Tn, gridArea:"bigBotCenter", short:true, descripcion:"uhihiu"},
     {titulo:"MMarket", fecha:"20 Jul - 30 Ago - 2023", github:"github.com/JuanJose", web:"github.com/JuanJose", image:MMarket, gridArea:"minBotRight", descripcion:"MMarket simplifica compras en tiendas locales a través de su plataforma en línea, beneficiando a tiendas y usuarios con opciones de compra en persona y entregas a domicilio. Su objetivo es ampliar su alcance."}
   ])
 
@@ -77,9 +77,7 @@ function Proyectos() {
               </section>
 
               <picture className="grid place-content-start max-w-[450px] min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-3 row-start-1 row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500">
-                {/* <div className="absolute w-full h-full"></div> */}
                   <img src={infoProyect.image} alt="" className=" object-cover"/>
-                  {/* <img src={MMarket} alt="" className="w-full rounded-3xl"/> */}
               </picture>
 
             </section>
@@ -89,17 +87,13 @@ function Proyectos() {
           </section> 
         : <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
 
-            {proyects.map((proyect, i) => (
+            {proyects?.map((proyect, i) => (
               <picture key={i} onClick={() => setInfoProyect(proyect)} className={`max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:${proyect.gridArea}]`}>
               <img src={proyect.image} alt="" className={`${proyect.short? "lg:h-full": null} w-full`}/>
             </picture>
             ))}
 
           </section> }
-
-        
-
-        
 
       </section>
     </section>
