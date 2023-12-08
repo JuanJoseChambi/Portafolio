@@ -1,6 +1,7 @@
 import Educacion from "./Educacion"
 import Proyectos from "./Proyectos"
 import SobreMi from "./SobreMi"
+import Tecnologias from "./Tecnologias"
 
 function Main() {
 
@@ -10,6 +11,7 @@ function Main() {
         <SobreMi/>
         <Educacion/>
         <Proyectos/>
+        <Tecnologias/>
     </main>
   )
 }
