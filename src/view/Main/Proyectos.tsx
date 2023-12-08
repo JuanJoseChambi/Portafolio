@@ -9,7 +9,7 @@ import { useState } from "react"
 
 function Proyectos() {
 
-  const [proyect, setProyect] = useState()
+  // const [proyect, setProyect] = useState()
 
   return (
     <section className='bg-[#d2d2d2]'>
@@ -62,7 +62,7 @@ function Proyectos() {
           <section className="w-[40%] h-full bg-blued-500 grid grid-cols-3 grid-rows-3">
             
             <section className="w-[80%] h-[80%] rounded-sm grid place-self-end place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
-              <h2 className="text-xl tracking-spacing text-white">MMARKET</h2>
+              <h2 className="text-xl tracking-spacing text-white"><b className="text-violet text-3xl">M</b>MARKET</h2>
             </section>
 
             <picture className="grid place-content-start max-w-[450px] rounded-xl overflow-hidden col-start-1 col-end-3 row-start-1 row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500">

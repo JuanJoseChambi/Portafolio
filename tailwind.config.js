@@ -26,6 +26,12 @@ export default {
       },
       screens: {
         "medium":"824px"
+      },
+      textColor: {
+        "violet":"#6845c7"
+      },
+      backgroundColor: {
+        "violet":"#6845c7"
       }
       // fontSize: {
         // "smx":"12.5px"

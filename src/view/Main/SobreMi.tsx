@@ -30,9 +30,9 @@ function SobreMi() {
               <h2 className="absolute text-5xl text-center text-neutral-800 font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">SOBRE MI</h2>
             </article>
 
-            <p className="text-sm font-light text-neutral-700">Soy Juan José, <b className="inline text-[#6845c7]">desarrollador Fullstack Jr</b>. Inicialmente interesado en ciberseguridad y videojuegos en 2022, me adentré en el desarrollo web. Comenzando de una manera Autodidacta y graduado de bootcamps como SoyHenry, donde he fortalecido habilidades tecnicas como blandas.</p>
+            <p className="text-sm font-light text-neutral-700">Soy Juan José, <b className="inline text-violet">desarrollador Fullstack Jr</b>. Inicialmente interesado en ciberseguridad y videojuegos en 2022, me adentré en el desarrollo web. Comenzando de una manera Autodidacta y graduado de bootcamps como SoyHenry, donde he fortalecido habilidades tecnicas como blandas.</p>
             
-            <p className="text-sm font-light text-neutral-700">Mi enfoque se basa en la <b className="inline text-[#6845c7]">práctica constante</b> y la adquisición continua de habilidades para ofrecer soluciones innovadoras. Con experiencia en frontend, backend y bases de datos, domino tecnologías clave como React, Express y PostgreSQL/MongoDB.</p>
+            <p className="text-sm font-light text-neutral-700">Mi enfoque se basa en la <b className="inline text-violet">práctica constante</b> y la adquisición continua de habilidades para ofrecer soluciones innovadoras. Con experiencia en frontend, backend y bases de datos, domino tecnologías clave como React, Express y PostgreSQL/MongoDB.</p>
 
           </article>
 
