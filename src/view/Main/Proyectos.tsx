@@ -203,10 +203,16 @@ function Proyectos() {
                       console.log(tecnologiasProyecto);
               
                       return (
-                        <section className=" w-[80%] min-h-[20%] flex flex-wrap justify-center items-center bg-limee-500 space-x-3">
+                        <section className=" w-[80%] min-h-[20%] flex flex-col flex-wrap justify-center items-center bg-limee-500 space-y-3">
+                         <section className="flex justify-center items-center space-x-3 flex-wrap">
                           {tecnologiasProyecto.map((tecno) => (
                             <div key={tecno.nombre} className="hover:-translate-y-2 my-1 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
                           ))}
+                         </section>
+                          <button className="flex justify-center border-b border-violet-700 items-center space-x-2 py-0.5 ">
+                            <i className='text-white text-[10px] bx bx-fullscreen'></i>
+                            <p className="text-white text-[10px] font-extralight">MOSTRAR MAS</p>
+                          </button>
                             
                         </section>
                       )
