@@ -6,7 +6,7 @@ import { useState } from "react";
 import { tecnologias } from "../../assets/Tecnologias";
 
 interface proyects {
-  tecnologias: string[];
+  tecnologias: (string | arrayTecnologias)[];
   titulo: string;
   fecha: string;
   github: string;
@@ -15,6 +15,11 @@ interface proyects {
   gridArea: string;
   descripcion: string;
   short?: boolean;
+}
+
+interface arrayTecnologias {
+  nombre:string;
+  img:JSX.Element;
 }
 
 function Proyectos() {
@@ -121,6 +126,9 @@ function Proyectos() {
   const [infoProyect, setInfoProyect] = useState<proyects | null>(null);
   // console.log(infoProyect);
 
+  // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
+  
+
   // const [proyect, setProyect] = useState()
 
   return (
@@ -163,6 +171,7 @@ function Proyectos() {
                 <p className="text-xs">{infoProyect.fecha}</p>
               </article>
               <p className="font-light text-sm">{infoProyect.descripcion}</p>
+              
             </section>
 
             <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500">
@@ -172,9 +181,7 @@ function Proyectos() {
                     (() => {
                       const nombre = infoProyect.titulo.toUpperCase().split("");
                       const primeraLetra = nombre[0].toString();
-                      const demasLetras = nombre
-                        .filter((i) => i !== nombre[0])
-                        .join("");
+                      const demasLetras = nombre.filter((i) => i !== nombre[0]).join("");
                       return (
                         <>
                           <b className="text-violet text-3xl">{primeraLetra}</b>
@@ -198,9 +205,13 @@ function Proyectos() {
                 <div className="absolute top-0 w-full h-full opacity-0 hover:opacity-100 hover:bg-[#000000c4] flex justify-center items-center z-10 transition-[background,opacity] duration-500">
                   {
                     (() => {
-                      const tecnologiasProyecto = tecnologias.filter(tecno => proyect.tecnologias.some(tecnoProyect => tecno.nombre === tecnoProyect  ))
+                      let tecnologiasProyecto = tecnologias.filter(tecno => proyect.tecnologias.some(tecnoProyect => tecno.nombre === tecnoProyect  ))
 
-                      console.log(tecnologiasProyecto);
+                      // console.log(tecnologiasProyecto);
+
+                      proyect.tecnologias = tecnologiasProyecto
+                      // console.log(proyect.tecnologias);
+                      
               
                       return (
                         <section className=" w-[80%] min-h-[20%] flex flex-col flex-wrap justify-center items-center bg-limee-500 space-y-3">
@@ -230,3 +241,50 @@ function Proyectos() {
 }
 
 export default Proyectos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopLeft]">
+            <img src={JCDV} alt="" className=" w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minTopCenter]">
+            <img src={RecipeFood} alt="" className="lg:h-full w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale  hover:grayscale-0 transition-[filter] duration-500 border-none flex justify-center items-end rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopRight]">
+            <img src={JCDV} alt="" className="w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigBotCenter]">
+            <img src={Tn} alt="" className="lg:h-full w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minBotRight]">
+            <img src={MMarket} alt="" className="lg:h-full w-full" />
+          </picture>
+
+        </section> */}
+
+
+
+
+
