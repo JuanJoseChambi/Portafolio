@@ -24,10 +24,20 @@
         "minBotRight"
         ;
     }
+    .selectText::selection {
+        background-color: #6845c7;
+        color: white;
+      }
+    
 }
 
 
 body{
     overflow-x: hidden;
+}
+body ::selection {
+    background-color: #6845c7;
+    color: white;
+    text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.5);
 }
 

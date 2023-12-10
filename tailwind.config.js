@@ -32,7 +32,9 @@ export default {
       },
       backgroundColor: {
         "violet":"#6845c7"
-      }
+      },
+              
+      
       // fontSize: {
         // "smx":"12.5px"
       // }

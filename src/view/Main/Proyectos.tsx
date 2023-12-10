@@ -48,14 +48,12 @@ function Proyectos() {
           <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-re-500">
             <i
               onClick={() => setInfoProyect(null)}
-              className="absolute top-0 right-0 lg:top-28 lg:left-0 text-3xl cursor-pointer text-violet  bx bx-x-circle"
+              className="absolute w-[30px] top-0 right-0 lg:top-28 lg:left-0 text-3xl cursor-pointer text-violet  bx bx-x-circle"
             ></i>
             <section className="w-almostFull lg:w-[55%] h-[200px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limde-500">
               <article className="w-full bg-liem-500">
                 <article className="relative flex justify-between items-center bg-limee-500">
-                  <h2 className="text-2xl font-semibold tracking-widest">
-                    {infoProyect.titulo}
-                  </h2>
+                  <h2 className="text-2xl font-semibold tracking-widest ">{infoProyect.titulo}</h2>
                   <ul className="flex justify-center items-center space-x-5 bg-redd-500">
                     <li>
                       <a href={infoProyect.github}>
@@ -69,14 +67,14 @@ function Proyectos() {
                     </li>
                   </ul>
                 </article>
-                <p className="text-xs">{infoProyect.fecha}</p>
+                <p className="text-xs ">{infoProyect.fecha}</p>
               </article>
-              <p className="font-light text-sm">{infoProyect.descripcion}</p>
+              <p className="font-light text-sm ">{infoProyect.descripcion}</p>
 
               <section className="w-full h-1/6 bg-limee-500 flex justify-around lg:justify-start items-center lg:space-x-3">
               {infoProyect.infoTec?.map((tec) => (
                   
-                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-150 transition-[transform_drop-shadow] ease-in-out duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
+                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-110 transition-[transform_drop-shadow] ease-in-out duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
                       {tec.img}
                     </picture>
 
@@ -86,8 +84,8 @@ function Proyectos() {
             </section>
 
             <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500">
-              <section className="hidden sm:grid w-[80%] h-[80%] rounded-sm place-self-end sm:place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
-                <h2 className="text-xl text-center tracking-spacing text-white">
+              <section className="hidden  sm:grid w-[80%] h-[80%] rounded-sm place-self-end sm:place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
+                <h2 className="text-xl text-center tracking-spacing  text-white">
                   {
                     (() => {
                       const nombre = infoProyect.titulo.toUpperCase().split("");
@@ -95,7 +93,7 @@ function Proyectos() {
                       const demasLetras = nombre.filter((i) => i !== nombre[0]).join("");
                       return (
                         <>
-                          <b className="text-violet text-3xl">{primeraLetra}</b>
+                          <b className=" text-violet text-3xl">{primeraLetra}</b>
                           {demasLetras}
                         </>
                       );
@@ -104,8 +102,8 @@ function Proyectos() {
                 </h2>
               </section>
 
-              <picture className="grid place-content-start min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-4 sm:col-end-3 row-start-1 row-end-4 sm:row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500">
-                <img src={infoProyect.image} alt="" className="object-cover" />
+              <picture className="grid place-content-start min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-4 sm:col-end-3 row-start-1 row-end-4 sm:row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500 pointer-events-none">
+                <img src={infoProyect.image} alt="" className="object-cover select-none" />
               </picture>
             </section>
           </section>
