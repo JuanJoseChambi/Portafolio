@@ -33,7 +33,7 @@ function Proyectos() {
   // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
   return (
-    <section className="bg-[#d2d2d2]">
+    <section className="bg-[#d2d2d2] my-20">
       <section className="area min-h-xl flex flex-col justify-center items-center pb-20 pt-20 space-y-24">
         <article className="relative flex justify-center items-end">
           <h2 className="text-[60px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
@@ -74,7 +74,7 @@ function Proyectos() {
               <section className="w-full h-1/6 bg-limee-500 flex justify-around lg:justify-start items-center lg:space-x-3">
               {infoProyect.infoTec?.map((tec) => (
                   
-                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-110 transition-[transform_drop-shadow] ease-in-out duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
+                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
                       {tec.img}
                     </picture>
 
@@ -124,7 +124,7 @@ function Proyectos() {
                       <section className=" w-[80%] min-h-[20%] flex flex-col flex-wrap justify-center items-center bg-limee-500 space-y-3">
                        <section className="flex justify-center items-center space-x-3 flex-wrap">
                         {tecnologiasProyecto.map((tecno) => (
-                          <div key={tecno.nombre} className="hover:-translate-y-2 my-1 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
+                          <div key={tecno.nombre} className="w-[30px] h-[30px] hover:-translate-y-2 my-1 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
                         ))}
                        </section>
                         <button className="flex justify-center border-b border-violet-700 items-center space-x-2 py-0.5 ">

@@ -28,6 +28,11 @@
         background-color: #6845c7;
         color: white;
       }
+      .firstLetter::first-letter {
+        font-weight: 600;
+        font-size: 22px;
+        color: #6845c7;
+      }
     
 }
 
@@ -39,5 +44,6 @@ body ::selection {
     background-color: #6845c7;
     color: white;
     text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.5);
+
 }
 
