@@ -1,7 +1,11 @@
+import { useState } from "react"
 import { tecnologias } from "../../assets/Tecnologias"
 
 
 function Habilidades() {
+
+  const [borderBottom, setBorderBottom] = useState<null | string>(null)
+
   return (
     <section className="area flex flex-col justify-start items-center min-h-xl bg-limee-500">
         
@@ -16,12 +20,13 @@ function Habilidades() {
           <h2 className="text-lg font-semibold tracking-spacing ">TECNICAS</h2>
           <article className="w-[450px] flex flex-wrap justify-center items-center bg-greend-500 ">
             {tecnologias.map((tec) => (
-              <>
-                <picture className="h-[35px] relative flex flex-col justify-center items-center mx-3 my-5 bg-blu-500 drop-shadow-[3px_5px_3px_grey] hover:-translate-y-3 transition-transform duration-500">
+                <picture key={tec.nombre} className="h-[35px] relative flex flex-col justify-center items-center mx-3 my-5 bg-blu-500 drop-shadow-[3px_5px_3px_grey] hover:drop-shadow-[3px_15px_8px_grey] hover:-translate-y-3 transition-[transform_drop-shadow] duration-500" onMouseEnter={() => setBorderBottom(tec.nombre)} onMouseLeave={() => setBorderBottom(null)}>
                   {tec.img}
-                  <small className="absolute -bottom-[20px] text-[10px] pointer-events-none">{tec.nombre}</small>
+                  <small className=" absolute -bottom-[20px] text-[10px] pointer-events-none tracking-wide">
+                    {tec.nombre}
+                    <div className={`absolute bottom-0 w-0 h-[1px] ${borderBottom === tec.nombre ? "w-full" : null} bg-violet transition-[width] duration-500`}></div>
+                  </small>
                 </picture>
-              </>
             ))}
           </article>
         </article>
