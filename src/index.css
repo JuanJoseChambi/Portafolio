@@ -1,49 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-    .area {
-        @apply max-w-screen-xl w-[95%] mx-auto 
-    }
-    .proyectos-medium {
-        grid-template-areas: 
-        "bigTopLeft minTopCenter bigTopRight"
-        "bigTopLeft bigBotCenter bigTopRight"
-        "bigTopLeft bigBotCenter minBotRight"
-        ;
-    }
-    .proyectos {
-        grid-template-areas: 
-        "bigTopLeft"
-        "minTopCenter"
-        "bigTopRight"
-        "bigBotCenter"
-        "minBotRight"
-        ;
-    }
-    .selectText::selection {
-        background-color: #6845c7;
-        color: white;
-      }
-      .firstLetter::first-letter {
-        font-weight: 600;
-        font-size: 22px;
-        color: #6845c7;
-      }
-    
-}
-
-
-body{
-    overflow-x: hidden;
-}
-body ::selection {
+  .area {
+    @apply max-w-screen-xl w-[95%] mx-auto;
+  }
+  .proyectos-medium {
+    grid-template-areas:
+      "bigTopLeft minTopCenter bigTopRight"
+      "bigTopLeft bigBotCenter bigTopRight"
+      "bigTopLeft bigBotCenter minBotRight";
+  }
+  .proyectos {
+    grid-template-areas:
+      "bigTopLeft"
+      "minTopCenter"
+      "bigTopRight"
+      "bigBotCenter"
+      "minBotRight";
+  }
+  .selectText::selection {
     background-color: #6845c7;
     color: white;
-    text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.5);
-
+  }
+  .firstLetter::first-letter {
+    font-weight: 600;
+    font-size: 22px;
+    color: #6845c7;
+  }
+  .cardServices {
+    @apply flex flex-col justify-center items-center space-y-5 basis-[300px] flex-grow h-[250px] border shadow-[10px_10px_15px_0px_grey] border-gray-300;
+  }
+  .cardInfoOpen {
+    animation: cardInfoOpen 1.3s ease-in-out forwards;
+  }
+  @keyframes cardInfoOpen {
+    0% {
+      transform: translateY(160px);
+    }
+    50% {
+      transform: translateY(0);
+      /* z-index: 10; */
+    }
+    100% {
+      transform: translateY(125px);
+      /* z-index: 10; */
+    }
+  }
+  .cardInfoClose {
+    animation: cardInfoClose 1.3s ease-in-out forwards;
+  }
+  @keyframes cardInfoClose {
+    0% {
+      transform: translateY(125px);
+    }
+    50% {
+      transform: translateY(0);
+      /* z-index: 10; */
+    }
+    100% {
+      transform: translateY(180px);
+      /* z-index: 10; */
+    }
+  }
 }
 
+body {
+  overflow-x: hidden;
+}
+body ::selection {
+  background-color: #6845c7;
+  color: white;
+  text-shadow: 5px 3px 1px rgba(0, 0, 0, 0.5);
+}

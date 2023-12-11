@@ -33,6 +33,9 @@ export default {
       backgroundColor: {
         "violet":"#6845c7"
       },
+      borderColor:{
+        "violet":"#6845c7"
+      },
               
       
       // fontSize: {
