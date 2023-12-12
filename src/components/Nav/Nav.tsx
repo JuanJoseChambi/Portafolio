@@ -3,7 +3,7 @@ import Logo from "../../assets/LogoJC.png"
 function Nav() {
 
   return (
-    <nav className="area fixed top-0 left-0 right-0 flex justify-between items-center z-10">
+    <nav className="area fixed top-0 left-0 right-0 flex justify-between items-center z-[500]">
         <a href="./" className="w-[60px]">
             <img src={Logo} alt="Juan Jose Ch" className="w-full"/>
         </a>

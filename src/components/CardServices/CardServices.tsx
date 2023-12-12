@@ -24,7 +24,7 @@ function CardServices({title, icon, info}:CardProps) {
       }, [cardInfo])
 
   return (
-    <article className={`cardServices relative cursor-pointer bg-redd-500 ${overFlow ? "" : "overflow-hidden"}`} onClick={() => setCardInfo(!cardInfo)} onMouseEnter={() => setStyle(true)} onMouseLeave={() => setStyle(false)}>
+    <article className={`cardServices relative cursor-pointer bg-re-500 ${overFlow ? "" : "overflow-hidden"}`} onClick={() => setCardInfo(!cardInfo)} onMouseEnter={() => setStyle(true)} onMouseLeave={() => setStyle(false)}>
         <i className={`text-8xl textDegrade ${icon}`}></i>
         <article className="flex justify-center items-center space-x-2 bg-redd-600">
             <p className="text-lg relative font-semibold tracking-spacing firstLetter">
@@ -33,7 +33,7 @@ function CardServices({title, icon, info}:CardProps) {
             </p>
         </article>
         
-        <section className={`absolute flex justify-center items-center w-almostFull h-1/2  ${cardInfo ?"cardInfoOpen " : "cardInfoClose"} transition-[transform_filter] duration-500 bg-white border border-gray-300`}>
+        <section className={`absolute flex justify-center items-center w-almostFull h-1/2 z-10 ${cardInfo ?"cardInfoOpen " : "cardInfoClose"} transition-[transform_filter] duration-500 bg-white border border-gray-300`}>
             <p className="text-xs font-light text-center px-2">{info}</p>
         </section>
     </article>
