@@ -35,38 +35,55 @@
     @apply flex flex-col justify-center items-center space-y-5 basis-[300px] flex-grow h-[250px] border shadow-[10px_10px_15px_0px_grey] border-gray-300;
   }
   .cardInfoOpen {
-    animation: cardInfoOpen 1.3s ease-in-out forwards;
+    animation: cardInfoOpen 1.1s ease-in-out forwards;
   }
   @keyframes cardInfoOpen {
     0% {
-      transform: translateY(160px);
+      transform: translateY(160px) scale(0.8);
     }
     50% {
-      transform: translateY(0);
-      /* z-index: 10; */
+      transform: translateY(0) scale(1);
     }
     100% {
-      transform: translateY(125px);
-      /* z-index: 10; */
+      transform: translateY(135px) scale(1);
+      filter: drop-shadow(5px 10px 8px grey);
+      
     }
   }
   .cardInfoClose {
-    animation: cardInfoClose 1.3s ease-in-out forwards;
-  }
+    animation: cardInfoClose 1.1s ease-in-out forwards;
+    }
+
   @keyframes cardInfoClose {
     0% {
-      transform: translateY(125px);
+      transform: translateY(135px) scale(1);
+      filter: drop-shadow(5px 10px 8px grey);
     }
     50% {
-      transform: translateY(0);
-      /* z-index: 10; */
+      transform: translateY(0) scale(1);
+      /* opacity: 50; */
     }
     100% {
-      transform: translateY(180px);
-      /* z-index: 10; */
+      transform: translateY(180px) scale(0.8);
+
     }
   }
+  .textDegrade {
+    background-image: -moz-linear-gradient(left, black,  #6845c7); /* Firefox */
+  background-image: -o-linear-gradient(left, black,  #6845c7); /* Opera */
+  background-image: linear-gradient(to left, black,  #6845c7); /* Estándar */
+  background-image: -webkit-linear-gradient(top, black,  #6845c7); /* Safari y Chrome */
+  -webkit-background-clip: text;
+  color: transparent;
+  }
 }
+
+
+
+
+
+
+
 
 body {
   overflow-x: hidden;

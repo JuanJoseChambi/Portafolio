@@ -127,7 +127,7 @@ function Proyectos() {
                           <div key={tecno.nombre} className="w-[30px] h-[30px] hover:-translate-y-2 my-1 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
                         ))}
                        </section>
-                        <button className="flex justify-center border-b border-violet-700 items-center space-x-2 py-0.5 ">
+                        <button className="flex justify-center border-b border-violet items-center space-x-2 py-0.5 ">
                           <i className='text-white text-[10px] bx bx-fullscreen'></i>
                           <p className="text-white text-[10px] font-extralight">MOSTRAR MAS</p>
                         </button>
