@@ -71,7 +71,7 @@ function Proyectos() {
               </article>
               <p className="font-light text-sm ">{infoProyect.descripcion}</p>
 
-              <section className="w-full h-1/6 bg-limee-500 flex justify-around lg:justify-start items-center lg:space-x-3">
+              <section className="w-full h-1/6 bg-limee-500 flex flex-wrap justify-around lg:justify-start items-center space-y-2 sm:space-y-0 lg:space-x-3">
               {infoProyect.infoTec?.map((tec) => (
                   
                     <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">

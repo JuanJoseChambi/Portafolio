@@ -12,9 +12,9 @@ function Habilidades() {
   return (
     <section className="area flex flex-col justify-start items-center min-h-xl bg-lim-500">
         
-       <article className="relative flex justify-start items-end mb-28 mr-[500px] bg-redd-500">
-        <h2 className="text-8xl text-start bg-greenn-500 text-[#adadad8c] select-none">HABILIDADES</h2>
-          <h2 className="absolute text-5xl text-neutral-800 font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">HABILIDADES</h2>
+       <article className="relative flex justify-start items-end mb-28 md:mr-[500px] bg-redd-500">
+        <h2 className="text-[60px] sm:text-8xl text-start bg-greenn-500 text-[#adadad8c] select-none">HABILIDADES</h2>
+        <h2 className="absolute text-5xl text-neutral-800 font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">HABILIDADES</h2>
        </article>
 
        <section className="w-full h-auto relative flex flex-col lg:flex-row justify-between items-end bg-grayd-500 space-y-14 lg:space-y-0">

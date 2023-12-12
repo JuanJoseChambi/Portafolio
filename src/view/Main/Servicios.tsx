@@ -5,7 +5,7 @@ import { servicesData } from "../../utilities/servicesData/servicesData"
 function Servicios() {  
 
   return (
-    <section className="area flex flex-col justify-start items-center min-h-xl bg-redd-500">
+    <section className="area flex flex-col justify-start items-center min-h-xl max-lg:mb-8 bg-redd-500">
 
       <TitleSections title="SERVICIOS" position="center" margin="bottom"/>
       
