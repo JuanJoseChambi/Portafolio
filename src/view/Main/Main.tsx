@@ -11,8 +11,6 @@ interface RefMain {
   refServicios:React.RefObject<HTMLDivElement>;
 }
 
-
-
 function Main({refSobreMi, refProyectos, refHabilidades, refServicios}:RefMain) {
 
 
@@ -20,9 +18,9 @@ function Main({refSobreMi, refProyectos, refHabilidades, refServicios}:RefMain) 
     <main className="">
         <SobreMi refSobreMi={refSobreMi}/>
         <Educacion/>
-        <Proyectos/>
-        <Habilidades/>
-        <Servicios/>
+        <Proyectos refProyectos={refProyectos}/>
+        <Habilidades refHabilidades={refHabilidades}/>
+        <Servicios refServicios={refServicios}/>
     </main>
   )
 }

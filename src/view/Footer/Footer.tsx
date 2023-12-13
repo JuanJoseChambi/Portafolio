@@ -9,7 +9,7 @@ function Footer({refFooter}:refFooter) {
     <footer className="bg-redd-500 " ref={refFooter}>
 
         <nav className="area flex flex-col md:flex-row justify-between items-center min-h-[200px] w-almostFull bg-limed-500">
-          <section className="w-full md:w-[600px] h-[200px] flex flex-col justify-center items-center md:items-start space-y-6 order-2 md:order-1 bg-grayd-500">
+          <section className="w-full md:w-[600px] h-[200px] flex flex-col justify-center items-center md:items-start space-y-6 order-2 md:order-1 xl:ml-10 bg-grayd-500">
             
             <p className="text-sm font-light bg-purplde-500">Si estás buscando un colaborador apasionado y comprometido para futuros proyectos, ¡estaré encantado de ser parte de tu equipo! Contáctame y exploremos juntos las oportunidades. ¡Hasta pronto!
             </p>
@@ -22,7 +22,7 @@ function Footer({refFooter}:refFooter) {
 
           </section>
 
-          <picture className="w-[200px] flex justify-center items-center order-1 md:order-2 bg-purpled-500">
+          <picture className="w-[200px] flex justify-center items-center order-1 md:order-2 xl:mr-36 bg-purpled-500">
             <img src={logoJC} alt="" className="w-full" />
           </picture>
         </nav>

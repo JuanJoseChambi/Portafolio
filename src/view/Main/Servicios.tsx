@@ -2,10 +2,14 @@ import CardServices from "../../components/CardServices/CardServices"
 import TitleSections from "../../components/TitleSections/TitleSections"
 import { servicesData } from "../../utilities/servicesData/servicesData"
 
-function Servicios() {  
+interface RefServicios {
+  refServicios:React.RefObject<HTMLDivElement>;
+}
+
+function Servicios({refServicios}:RefServicios) {  
 
   return (
-    <section className="area flex flex-col justify-start items-center min-h-xl max-lg:mb-8 bg-redd-500">
+    <section className="area flex flex-col justify-start items-center min-h-xl max-lg:mb-8 bg-redd-500" ref={refServicios}>
 
       <TitleSections title="SERVICIOS" position="center" margin="bottom"/>
       
