@@ -12,13 +12,14 @@ function App() {
   const refHabilidades = useRef<HTMLDivElement>(null)
   const refServicios = useRef<HTMLDivElement>(null)
   const refFooter = useRef<HTMLDivElement>(null);  
+  const refEducacion = useRef<HTMLDivElement>(null);
 
 
   return (
     <>
-      <Nav refHeader={refHeader} refSobreMi={refSobreMi} refProyectos={refProyectos} refHabilidades={refHabilidades} refServicios={refServicios} refFooter={refFooter} />
+      <Nav refHeader={refHeader} refSobreMi={refSobreMi} refProyectos={refProyectos} refHabilidades={refHabilidades} refServicios={refServicios} refFooter={refFooter} refEducacion={refEducacion}/>
       <Header refHeader={refHeader}/>
-      <Main refSobreMi={refSobreMi} refProyectos={refProyectos} refHabilidades={refHabilidades} refServicios={refServicios}/>
+      <Main refSobreMi={refSobreMi} refProyectos={refProyectos} refHabilidades={refHabilidades} refServicios={refServicios} refEducacion={refEducacion}/>
       <Footer refFooter={refFooter}/>
     </>
   )

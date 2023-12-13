@@ -5,8 +5,6 @@ interface RefSobreMi {
   refSobreMi:React.RefObject<HTMLDivElement>
 }
 
-
-
 function SobreMi({refSobreMi}:RefSobreMi) {
 
     const [image, setImage] = useState(false)
