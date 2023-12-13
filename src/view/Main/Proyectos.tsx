@@ -7,8 +7,8 @@ interface proyects {
   tecnologias: (string | arrayTecnologias)[];
   titulo: string;
   fecha: string;
-  github: string;
-  web: string;
+  github?: string;
+  web?: null | string;
   image: string;
   gridArea: string;
   descripcion: string;
@@ -45,36 +45,34 @@ function Proyectos() {
         </article>
 
         {infoProyect ? (
-          <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-re-500">
-            <i
-              onClick={() => setInfoProyect(null)}
-              className="absolute w-[30px] top-0 right-0 lg:top-28 lg:left-0 text-3xl cursor-pointer text-violet  bx bx-x-circle"
-            ></i>
-            <section className="w-almostFull lg:w-[55%] h-[200px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limde-500">
+          <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500">
+            
+            <section className="w-almostFull lg:w-[55%] min-h-[350px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limed-500">
               <article className="w-full bg-liem-500">
                 <article className="relative flex justify-between items-center bg-limee-500">
                   <h2 className="text-2xl font-semibold tracking-widest ">{infoProyect.titulo}</h2>
                   <ul className="flex justify-center items-center space-x-5 bg-redd-500">
-                    <li>
-                      <a href={infoProyect.github}>
+                    {infoProyect.github && <li>
+                      <a href={infoProyect.github} target="_blank">
                         <i className="cursor-pointer text-xl hover:text-violet bx bxl-github"></i>
                       </a>
-                    </li>
-                    <li>
-                      <a href={infoProyect.web}>
+                    </li>}
+                   {infoProyect.web && <li>
+                      <a href={infoProyect.web} target="_blank">
                         <i className="cursor-pointer text-xl hover:text-violet bx bx-world"></i>
                       </a>
-                    </li>
+                    </li>} 
+                    <i onClick={() => setInfoProyect(null)} className="cursor-pointer text-[40px] textDegrade  bx bx-x"></i>
                   </ul>
                 </article>
                 <p className="text-xs ">{infoProyect.fecha}</p>
               </article>
-              <p className="font-light text-sm ">{infoProyect.descripcion}</p>
+              <p className="font-light text-sm" dangerouslySetInnerHTML={{ __html: infoProyect.descripcion }}></p>
 
-              <section className="w-full h-1/6 bg-limee-500 flex flex-wrap justify-around lg:justify-start items-center space-y-2 sm:space-y-0 lg:space-x-3">
+              <section className="w-full h-1/6 bg-limee-500 flex flex-wrap justify-around lg:justify-start items-center sm:space-y-0 lg:space-x-3">
               {infoProyect.infoTec?.map((tec) => (
                   
-                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
+                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 my-3 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
                       {tec.img}
                     </picture>
 
@@ -88,9 +86,9 @@ function Proyectos() {
                 <h2 className="text-xl text-center tracking-spacing  text-white">
                   {
                     (() => {
-                      const nombre = infoProyect.titulo.toUpperCase().split("");
-                      const primeraLetra = nombre[0].toString();
-                      const demasLetras = nombre.filter((i) => i !== nombre[0]).join("");
+                      const nombre = infoProyect.titulo.toUpperCase();
+                      const primeraLetra = nombre[0];
+                      const demasLetras = nombre.slice(1);
                       return (
                         <>
                           <b className=" text-violet text-3xl">{primeraLetra}</b>

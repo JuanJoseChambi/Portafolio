@@ -1,9 +1,13 @@
 import logo from "../../assets/LogoJC.png"
 
+interface RefHeader {
+  refHeader:React.RefObject<HTMLDivElement>
+}
 
-function Header() {
+function Header({refHeader}:RefHeader) {
+
   return (
-    <header className="bg-neutral-900 h-xl flex justify-center items-center ">
+    <header className="bg-neutral-900 h-xl flex justify-center items-center " ref={refHeader}>
         <section className="area flex flex-col md:flex-row justify-between items-center space-y-10 relative bg-redd-500">
 
           <article className="bg-limee-500">

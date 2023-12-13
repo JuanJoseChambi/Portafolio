@@ -1,9 +1,12 @@
 import logoJC from "../../assets/LogoJC.png"
 
+interface refFooter {
+  refFooter:React.RefObject<HTMLDivElement>
+}
 
-function Footer() {
+function Footer({refFooter}:refFooter) {
   return (
-    <footer className="bg-redd-500 ">
+    <footer className="bg-redd-500 " ref={refFooter}>
 
         <nav className="area flex flex-col md:flex-row justify-between items-center min-h-[200px] w-almostFull bg-limed-500">
           <section className="w-full md:w-[600px] h-[200px] flex flex-col justify-center items-center md:items-start space-y-6 order-2 md:order-1 bg-grayd-500">

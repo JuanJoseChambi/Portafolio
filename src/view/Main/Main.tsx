@@ -4,12 +4,21 @@ import SobreMi from "./SobreMi"
 import Habilidades from "./Habilidades"
 import Servicios from "./Servicios"
 
-function Main() {
+interface RefMain {
+  refSobreMi:React.RefObject<HTMLDivElement>;
+  refProyectos:React.RefObject<HTMLDivElement>;
+  refHabilidades:React.RefObject<HTMLDivElement>;
+  refServicios:React.RefObject<HTMLDivElement>;
+}
+
+
+
+function Main({refSobreMi, refProyectos, refHabilidades, refServicios}:RefMain) {
 
 
   return (
     <main className="">
-        <SobreMi/>
+        <SobreMi refSobreMi={refSobreMi}/>
         <Educacion/>
         <Proyectos/>
         <Habilidades/>

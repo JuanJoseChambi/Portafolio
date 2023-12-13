@@ -1,10 +1,13 @@
 import { useState } from "react"
 import sombra from "../../assets/main/SobreMi/sombraEnt.png"
 
+interface RefSobreMi {
+  refSobreMi:React.RefObject<HTMLDivElement>
+}
 
 
 
-function SobreMi() {
+function SobreMi({refSobreMi}:RefSobreMi) {
 
     const [image, setImage] = useState(false)
 
@@ -17,7 +20,7 @@ function SobreMi() {
   
 
   return (
-    <section className="area min-h-xl flex flex-wrap justify-around items-center space-y-28 medium:space-y-0 pt-20 medium:py-0 bg-redd-500 ">
+    <section className="area min-h-xl flex flex-wrap justify-around items-center space-y-28 medium:space-y-0 pt-20 medium:py-0 bg-redd-500 " ref={refSobreMi}>
 
           <picture className="max-w-90% sm:w-96 relative flex justify-center items-center ">
             <div className={`absolute w-full h-full rounded-full transition-all duration-500 ${image ? "bg-neutral-700 shadow-[0px_0px_10px_5px_#404040]" : "bg-[#D9D9D9] shadow-[0px_0px_100px_10px_#40404062]"} `}></div>
