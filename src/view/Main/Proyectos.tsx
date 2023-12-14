@@ -1,7 +1,8 @@
 import { proyectsData } from "../../utilities/proyectsData/proyectsData";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { tecnologias } from "../../assets/Tecnologias";
+import { useFadeScrollY } from "../../hooks/useFadeScrollY";
 
 interface proyects {
   tecnologias: (string | arrayTecnologias)[];
@@ -27,6 +28,9 @@ interface RefProyectos {
 
 function Proyectos({refProyectos}: RefProyectos) {
   // console.log(tecnologias);
+  const refScrollTitle = useRef(null)
+  const refScrollInfoProyects = useRef(null)
+  // const refScrollProyects = useRef(null)
 
   const [proyects, setProyects] = useState<proyects[]>(proyectsData);
   
@@ -35,10 +39,13 @@ function Proyectos({refProyectos}: RefProyectos) {
 
   // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
+  useFadeScrollY(refScrollTitle, "opacity-100 translate-y-0")
+  useFadeScrollY(refScrollInfoProyects, "opacity-100 translate-x-0")
+
   return (
     <section className="bg-[#d2d2d2]" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center pb-20 pt-20 space-y-24">
-        <article className="relative flex justify-center items-end">
+        <article className="relative flex justify-center items-end scrollFadeTop " ref={refScrollTitle}>
           <h2 className="text-[65px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
             PROYECTOS
           </h2>
@@ -48,9 +55,9 @@ function Proyectos({refProyectos}: RefProyectos) {
         </article>
 
         {infoProyect ? (
-          <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500">
+          <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500 scrollFadeLeft" ref={refScrollInfoProyects}>
             
-            <section className="w-almostFull lg:w-[55%] min-h-[350px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limed-500">
+            <section className="w-almostFull lg:w-[55%] min-h-[350px] order-2 lg:order-1 flex flex-col justify-start items-start space-y-5 bg-limed-500 scrollFadeLeft" >
               <article className="w-full mt-10 bg-limee-500">
                 <article className="relative flex justify-between items-center bg-limee-500">
                   <h2 className="text-2xl font-semibold tracking-widest ">{infoProyect.titulo}</h2>
@@ -75,7 +82,7 @@ function Proyectos({refProyectos}: RefProyectos) {
               <section className="w-full h-1/6 bg-limee-500 flex flex-wrap justify-around lg:justify-start items-center sm:space-y-0 lg:space-x-3">
               {infoProyect.infoTec?.map((tec) => (
                   
-                    <picture className="bg-redd-500 h-[25px] hover:-translate-y-2 my-3 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
+                    <picture key={tec.nombre} className="bg-redd-500 h-[25px] hover:-translate-y-2 my-3 hover:scale-110 transition-[transform_drop-shadow] duration-500  flex flex-col justify-center items-center drop-shadow-[0px_10px_5px_black] hover:drop-shadow-[0px_15px_10px_black]">
                       {tec.img}
                     </picture>
 
@@ -84,7 +91,7 @@ function Proyectos({refProyectos}: RefProyectos) {
               
             </section>
 
-            <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500">
+            <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500 scrollFadeRight" >
               <section className="hidden  sm:grid w-[80%] h-[80%] rounded-sm place-self-end sm:place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
                 <h2 className="text-xl text-center tracking-spacing  text-white">
                   {

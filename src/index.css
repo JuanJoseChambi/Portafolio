@@ -47,12 +47,11 @@
     100% {
       transform: translateY(135px);
       filter: drop-shadow(5px 10px 8px grey);
-      
     }
   }
   .cardInfoClose {
     animation: cardInfoClose 1.1s ease-in-out forwards;
-    }
+  }
 
   @keyframes cardInfoClose {
     0% {
@@ -65,22 +64,33 @@
     }
     100% {
       transform: translateY(180px);
-
     }
   }
   .textDegrade {
-    background-image: -moz-linear-gradient(left, black,  #6845c7); /* Firefox */
-  background-image: -o-linear-gradient(left, black,  #6845c7); /* Opera */
-  background-image: linear-gradient(to left, black,  #6845c7); /* Estándar */
-  background-image: -webkit-linear-gradient(top, black,  #6845c7); /* Safari y Chrome */
-  -webkit-background-clip: text;
-  color: transparent;
+    background-image: -moz-linear-gradient(left, black, #6845c7); /* Firefox */
+    background-image: -o-linear-gradient(left, black, #6845c7); /* Opera */
+    background-image: linear-gradient(to left, black, #6845c7); /* Estándar */
+    background-image: -webkit-linear-gradient(
+      top,
+      black,
+      #6845c7
+    ); /* Safari y Chrome */
+    -webkit-background-clip: text;
+    color: transparent;
   }
-
+  .scrollFadeLeft {
+    @apply -translate-x-10 opacity-0 transition-[transform_opacity] duration-1000
+  }
+  .scrollFadeRight {
+    @apply translate-x-10 opacity-0 transition-[transform_opacity] duration-1000
+  }
+  .scrollFadeBottom {
+    @apply translate-y-16 opacity-0 transition-[transform_opacity] duration-1000
+  }
+  .scrollFadeTop {
+    @apply -translate-y-16 opacity-0 transition-[transform_opacity] duration-1000
+  }
 }
-
-
-
 
 body {
   overflow-x: hidden;
