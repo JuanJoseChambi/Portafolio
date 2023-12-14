@@ -13,7 +13,7 @@ function Habilidades({refHabilidades}:RefHabilidades) {
 
 
   return (
-    <section className="area flex flex-col justify-start items-center min-h-xl bg-lim-500" ref={refHabilidades}>
+    <section className="area flex flex-col justify-start items-center min-h-xl bg-lim-500 py-16" ref={refHabilidades}>
         
        <article className="relative flex justify-start items-end mb-28 md:mr-[500px] bg-redd-500">
         <h2 className="text-[60px] sm:text-8xl text-start bg-greenn-500 text-[#adadad8c] select-none">HABILIDADES</h2>

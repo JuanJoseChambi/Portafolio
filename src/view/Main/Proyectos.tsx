@@ -37,7 +37,7 @@ function Proyectos({refProyectos}: RefProyectos) {
   // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
   return (
-    <section className="bg-[#d2d2d2] my-20" ref={refProyectos}>
+    <section className="bg-[#d2d2d2]" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center pb-20 pt-20 space-y-24">
         <article className="relative flex justify-center items-end">
           <h2 className="text-[60px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">

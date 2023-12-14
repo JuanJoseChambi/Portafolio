@@ -5,7 +5,7 @@ export function useScrollSection(ref: React.RefObject<HTMLDivElement>) {
     if (ref.current) {
       ref.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'start',
       });
     }
   }, [ref]);
