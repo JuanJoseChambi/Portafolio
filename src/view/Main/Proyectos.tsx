@@ -32,7 +32,6 @@ function Proyectos({refProyectos}: RefProyectos) {
   
 
   const [infoProyect, setInfoProyect] = useState<proyects | null>(null);
-  console.log(infoProyect);
 
   // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
@@ -40,7 +39,7 @@ function Proyectos({refProyectos}: RefProyectos) {
     <section className="bg-[#d2d2d2]" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center pb-20 pt-20 space-y-24">
         <article className="relative flex justify-center items-end">
-          <h2 className="text-[60px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
+          <h2 className="text-[65px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
             PROYECTOS
           </h2>
           <h2 className="absolute text-5xl text-neutral-800 font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">
@@ -52,7 +51,7 @@ function Proyectos({refProyectos}: RefProyectos) {
           <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500">
             
             <section className="w-almostFull lg:w-[55%] min-h-[350px] order-2 lg:order-1 flex flex-col  justify-start items-start space-y-5 bg-limed-500">
-              <article className="w-full bg-liem-500">
+              <article className="w-full mt-10 bg-limee-500">
                 <article className="relative flex justify-between items-center bg-limee-500">
                   <h2 className="text-2xl font-semibold tracking-widest ">{infoProyect.titulo}</h2>
                   <ul className="flex justify-center items-center space-x-5 bg-redd-500">

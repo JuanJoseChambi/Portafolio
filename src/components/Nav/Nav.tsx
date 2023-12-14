@@ -15,6 +15,7 @@ interface RefPortafolio {
 
 function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios, refFooter, refEducacion}:RefPortafolio ) {
 
+  const [navMd, setNavMd] = useState(false)
   const [sectionActive, setSectionActive] = useState("home")
   const [styleNav, setStyleNav] = useState(false)
 
@@ -83,20 +84,28 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
     ]
 
     return (
-      <nav className="bg-gradient-to-b from-[#0f0f0fb1] via-transparent to-transparent fixed top-0 left-0 right-0 filter backdrop-blur-sm z-[500]">
-        <nav className="area  flex justify-between items-center  ">
+      <nav className="bg-gradient-to-b from-[#0f0f0fb1] via-[#00000042] to-transparent fixed top-0 left-0 right-0 filter backdrop-blur-sm z-[500]">
+        <nav className="area relative flex justify-between items-center  ">
           <a href="./" className="relative w-[60px]">
               <img src={Logo} alt="Juan Jose Ch" className="w-full"/>
           </a>
 
-          <button className="block md:hidden text-2xl"><i className='bx bx-menu'></i></button>
+          <button onClick={() => setNavMd(!navMd)} className={`block md:hidden text-3xl z-[500] ${styleNav? (navMd ? "text-white" :"text-black"): "text-white"}`}>{navMd ?<i className='bx bx-x'></i> :<i className='bx bx-menu'></i>}</button>
           
-          <ul className="h-[40px] px-3 hidden relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs">
+          <ul className={`${navMd 
+            ? "w-full h-screen flex flex-col space-y-5 justify-center items-center fixed top-0 left-0 text-xl opacity-100 bg-[#1a1a1aaa]" 
+            : "hidden"} transition-colors duration-500 md:h-[40px] md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs`}>
+            
             {navSections.map((sections) => (
-             <li className={`cursor-pointer   transition-[color_font-size_font-height] duration-500 
-             ${sectionActive == sections.section  ? (sections.section === "home"? "text-white text-base font-medium" : (styleNav && "text-violet text-base font-medium")): (styleNav? "text-black": "text-neutral-400")}`} 
-            onClick={sections.scroll}>{sections.text}</li>
+             <li key={sections.text} className={`cursor-pointer transition-[color_font-size_font-height] duration-500 
+             ${sectionActive == sections.section  
+              ? (sections.section === "home"
+                ? "text-white hover:text-violet md:text-white md:text-sm " 
+                : (styleNav && "text-white hover:text-violet md:text-violet md:text-sm md:font-medium"))
+              : (styleNav? "text-white hover:text-violet md:text-black": "text-white   md:text-neutral-400")}`} 
+            onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll}>{sections.text}</li>
             ))}
+
           </ul>
         </nav>
 

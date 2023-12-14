@@ -9,7 +9,7 @@ interface RefServicios {
 function Servicios({refServicios}:RefServicios) {  
 
   return (
-    <section className="area flex flex-col justify-start items-center min-h-xl max-lg:mb-8 bg-redd-500" ref={refServicios}>
+    <section className="area flex flex-col justify-start items-center min-h-[600px] max-xl:mb-10 bg-redd-500" ref={refServicios}>
 
       <TitleSections title="SERVICIOS" position="center" margin="bottom"/>
       
