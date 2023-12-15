@@ -1,10 +1,19 @@
+import { useRef } from "react"
 import logo from "../../assets/LogoJC.png"
+import { useFadeScrollY } from "../../hooks/useFadeScrollY"
 
 interface RefHeader {
   refHeader:React.RefObject<HTMLDivElement>
 }
 
 function Header({refHeader}:RefHeader) {
+
+  const refTitleXl = useRef(null)
+  const refTitleXS = useRef(null)
+
+  useFadeScrollY(refTitleXl, "opacity-100 translate-x-0")
+  useFadeScrollY(refTitleXS, "opacity-100 translate-x-0")
+
 
   return (
     <header className="bg-neutral-900 h-xl flex justify-center items-center " ref={refHeader}>
@@ -14,8 +23,8 @@ function Header({refHeader}:RefHeader) {
             
             <p className="font-semibold tracking-widest mx-16 text-neutral-700">SOY</p>
             <article className="relative bg-limee-500 grid place-items-center">
-              <h2 className="text-8xl text-center text-[#adadad8c] select-none">JUAN JOSE CHAMBI</h2>
-              <h2 className="absolute text-5xl text-center text-white font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626]">JUAN JOSE CHAMBI</h2>
+              <h2 className="text-8xl text-center text-[#adadad8c] select-none scrollFadeLeft" ref={refTitleXl}>JUAN JOSE CHAMBI</h2>
+              <h2 className="absolute text-5xl text-center text-white font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626] scrollFadeRight" ref={refTitleXS}>JUAN JOSE CHAMBI</h2>
             </article>
             <h1 className="font-semibold tracking-widest w-full text-end text-neutral-700">DESARROLLADOR FRONTEND<br></br>FULLSTACK</h1>
 
