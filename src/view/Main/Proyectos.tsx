@@ -1,6 +1,6 @@
 import { proyectsData } from "../../utilities/proyectsData/proyectsData";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { tecnologias } from "../../assets/Tecnologias";
 import { useFadeScrollY } from "../../hooks/useFadeScrollY";
 
@@ -8,7 +8,7 @@ interface proyects {
   tecnologias: (string | arrayTecnologias)[];
   titulo: string;
   fecha: string;
-  github?: string;
+  github?: null | string;
   web?: null | string;
   image: string;
   gridArea: string;
@@ -27,24 +27,24 @@ interface RefProyectos {
 }
 
 function Proyectos({refProyectos}: RefProyectos) {
-  // console.log(tecnologias);
+
   const refScrollTitle = useRef(null)
-  const refScrollInfoProyects = useRef(null)
-  // const refScrollProyects = useRef(null)
 
   const [proyects, setProyects] = useState<proyects[]>(proyectsData);
   
 
   const [infoProyect, setInfoProyect] = useState<proyects | null>(null);
 
+  console.log(infoProyect);
+  
+
   // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
   useFadeScrollY(refScrollTitle, "opacity-100 translate-y-0")
-  useFadeScrollY(refScrollInfoProyects, "opacity-100 translate-x-0")
 
   return (
     <section className="bg-[#d2d2d2]" ref={refProyectos}>
-      <section className="area min-h-xl flex flex-col justify-center items-center pb-20 pt-20 space-y-24">
+      <section className="area min-h-xl flex flex-col justify-center items-center py-16 space-y-20 bg-redd-500">
         <article className="relative flex justify-center items-end scrollFadeTop " ref={refScrollTitle}>
           <h2 className="text-[65px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
             PROYECTOS
@@ -55,10 +55,11 @@ function Proyectos({refProyectos}: RefProyectos) {
         </article>
 
         {infoProyect ? (
-          <section className="w-[95%] min-h-[500px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 bg-redd-500 scrollFadeLeft" ref={refScrollInfoProyects}>
+          <section className={`w-[95%] min-h-[400px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 opacity-0 transition-opacity duration-1000
+          ${infoProyect.titulo ? "opacity-100 " : null }`} >
             
-            <section className="w-almostFull lg:w-[55%] min-h-[350px] order-2 lg:order-1 flex flex-col justify-start items-start space-y-5 bg-limed-500 scrollFadeLeft" >
-              <article className="w-full mt-10 bg-limee-500">
+            <section className="w-almostFull lg:w-[55%] min-h-[300px] order-2 lg:order-1 flex flex-col justify-between items-center mt-10 lg:mt-0 space-y-5 bg-lim-500" >
+              <article className="w-full  bg-limee-500">
                 <article className="relative flex justify-between items-center bg-limee-500">
                   <h2 className="text-2xl font-semibold tracking-widest ">{infoProyect.titulo}</h2>
                   <ul className="flex justify-center items-center space-x-5 bg-redd-500">
@@ -91,7 +92,7 @@ function Proyectos({refProyectos}: RefProyectos) {
               
             </section>
 
-            <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500 scrollFadeRight" >
+            <section className="max-sm:min-w-[70%] max-sm:max-w-[90%] sm:w-[450px] max-h-[550px] sm:h-full order-1 lg:order-2 bg-blued-500 grid grid-cols-3 grid-rows-3 bg-redd-500" >
               <section className="hidden  sm:grid w-[80%] h-[80%] rounded-sm place-self-end sm:place-content-center col-start-2 col-end-4 row-start-2 row-end-4 shadow-[-15px_15px_35px_0_black] bg-neutral-700">
                 <h2 className="text-xl text-center tracking-spacing  text-white">
                   {
@@ -111,12 +112,13 @@ function Proyectos({refProyectos}: RefProyectos) {
               </section>
 
               <picture className="grid place-content-start min-h-[100px] rounded-xl overflow-hidden col-start-1 col-end-4 sm:col-end-3 row-start-1 row-end-4 sm:row-end-3 shadow-[-15px_15px_35px_0_black] bg-purplee-500 pointer-events-none">
-                <img src={infoProyect.image} alt="" className="object-cover select-none" />
+                <img src={infoProyect.image} alt="Proyectos JC" className="object-cover select-none" />
               </picture>
             </section>
           </section>
         ) : (
-          <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
+          <section className="w-almostFull lg:w-[1100px] lg:h-[600px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
+
             {proyects?.map((proyect, i) => {
 
                 const tecnologiasProyecto = tecnologias.filter(tecno => proyect.tecnologias.some(tecnoProyect => tecno.nombre === tecnoProyect  ))

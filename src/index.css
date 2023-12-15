@@ -79,16 +79,16 @@
     color: transparent;
   }
   .scrollFadeLeft {
-    @apply -translate-x-10 opacity-0 transition-[transform_opacity] duration-1000
+    @apply -translate-x-10 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
   .scrollFadeRight {
-    @apply translate-x-10 opacity-0 transition-[transform_opacity] duration-1000
+    @apply translate-x-10 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
   .scrollFadeBottom {
-    @apply translate-y-16 opacity-0 transition-[transform_opacity] duration-1000
+    @apply translate-y-16 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
   .scrollFadeTop {
-    @apply -translate-y-16 opacity-0 transition-[transform_opacity] duration-1000
+    @apply -translate-y-16 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
 }
 

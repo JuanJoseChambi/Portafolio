@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react"
-import { useFadeScrollY } from "../../hooks/useFadeScrollY";
+import { useEffect, useState } from "react"
 
 interface CardProps {
     title:string;
@@ -12,7 +11,6 @@ function CardServices({title, icon, info}:CardProps) {
     const [cardInfo, setCardInfo] = useState(false)
     const [overFlow, setOverFlow] = useState(false)
   
-    const refCardService = useRef(null)
 
     useEffect(() => {
         if (cardInfo) {
@@ -26,11 +24,10 @@ function CardServices({title, icon, info}:CardProps) {
       }, [cardInfo])
 
 
-  useFadeScrollY(refCardService, "opacity-100 translate-y-0")
 
 
   return (
-    <article className={`cardServices relative cursor-pointer bg-white scrollFadeBottom ${overFlow ? "" : "overflow-hidden"}`} onClick={() => setCardInfo(!cardInfo)} onMouseEnter={() => setStyle(true)} onMouseLeave={() => setStyle(false)} ref={refCardService}>
+    <article className={`cardServices relative cursor-pointer bg-white ${overFlow ? "" : "overflow-hidden"}`} onClick={() => setCardInfo(!cardInfo)} onMouseEnter={() => setStyle(true)} onMouseLeave={() => setStyle(false)} >
         <i className={`text-8xl textDegrade ${icon}`}></i>
         <article className="flex justify-center items-center space-x-2 bg-redd-600">
             <article className="text-lg relative font-semibold tracking-spacing firstLetter">
