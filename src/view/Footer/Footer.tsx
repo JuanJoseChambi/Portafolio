@@ -27,8 +27,8 @@ function Footer({refFooter}:refFooter) {
             </p>
 
             <ul className="text-[30px] flex justify-center items-center space-x-10 bg-redd-500">
-              <li><i className='w-12 h-12 text-center flex justify-center items-center rounded-full bx bxl-linkedin' ></i></li>
-              <li><i className='w-12 h-12 text-center flex justify-center items-center rounded-full bx bxl-github' ></i></li>
+              <li className=""><a target="_blank" className="w-12 h-12 cursor-pointer text-center flex justify-center items-center rounded-full hover:text-violet transition-colors duration-500 bg-red-" href="https://github.com/JuanJoseChambi"><i className='bx bxl-linkedin' ></i></a></li>
+              <li className=""><a target="_blank" className="w-12 h-12 cursor-pointer text-center flex justify-center items-center rounded-full hover:text-violet transition-colors duration-500 bg-red-" href="https://www.linkedin.com/in/juanjosechambi/"><i className='bx bxl-github' ></i></a></li>
               <li></li>
             </ul>
 
@@ -43,17 +43,17 @@ function Footer({refFooter}:refFooter) {
           <article className="area flex flex-col justify-evenly items-center min-h-[200px] w-almostFull bg-re-500">
             <ul className="w-almostFull flex flex-wrap justify-center items-center gap-5 bg-violete scrollFadeTop" ref={refLinks}>
               <li className="flex flex-grow basis-[200px] flex-col justify-center items-center space-y-2 h-[100px] bg-bluee-500">
-                <i className='text-white text-xl bx bx-envelope' ></i>
+                <i className='text-white text-[23px] bx bx-envelope' ></i>
                 <p className="font-semibold text-white text-sm tracking-widest">MAIL</p>
                 <p className="text-xs text-neutral-400">chambijuanjose05@gmail.com</p>
               </li>
               <li className="flex flex-grow basis-[200px] flex-col justify-center items-center space-y-2 h-[100px] bg-bluee-500">
-                <i className='text-white text-xl bx bx-phone'></i>
+                <i className='text-white text-[23px] bx bx-phone'></i>
                 <p className="font-semibold text-white text-sm tracking-widest">TELEFONO</p>
                 <p className="text-xs tracking-widest text-neutral-400">(+54) 1161000622</p>
               </li>
               <li className="flex flex-grow basis-[200px] flex-col justify-center items-center space-y-2 h-[100px] bg-bluee-500">
-                <i className='text-white text-xl bx bx-map' ></i>
+                <i className='text-white text-[23px] bx bx-map' ></i>
                 <p className="font-semibold text-white text-sm tracking-widest">UBICACION</p>
                 <p className="text-xs text-neutral-400">Buenos Aires, Argentina</p>
               </li>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/LogoJC.png"
 import { useScrollSection } from "../../hooks/useScrollSections";
+import ButtonRedirectHome from "../ButtonRedirectHome/ButtonRedirectHome";
 
 
 interface RefPortafolio {
@@ -16,8 +17,8 @@ interface RefPortafolio {
 function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios, refFooter, refEducacion}:RefPortafolio ) {
 
   const [navMd, setNavMd] = useState(false)
-  const [sectionActive, setSectionActive] = useState("home")
-  const [styleNav, setStyleNav] = useState(false)
+  const [styleNav, setStyleNav] = useState< boolean| string | null>(null)
+  
 
   useEffect(() => {
 
@@ -33,29 +34,10 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
       ];
 
       const scrollY = window.scrollY;
-
-      
-      for (const section of sections) {
-        const { id, ref } = section;
-        if (ref.current) {
-          const sectionTop = ref.current.offsetTop;
-          const sectionBottom = sectionTop + ref.current.clientHeight;
-          if (scrollY >= 3400) {
-            setSectionActive("contacto");
-            break;
-          }
-          if (id !== "home" && scrollY >= sectionTop) {
-            setStyleNav(true);
-          } else {
-            setStyleNav(false);
-          }
-
-          if (scrollY >= sectionTop && scrollY < sectionBottom) {
-            
-            setSectionActive(id);
-            break;
-          }
-        }
+      if (sections[1].ref.current && scrollY >= sections[1].ref.current?.offsetTop) {
+        setStyleNav(true)
+      }else {
+        setStyleNav(false)
       }
     }
 
@@ -84,31 +66,28 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
     ]
 
     return (
-      <nav className="bg-gradient-to-b from-[#0f0f0fb1] via-[#00000042] to-transparent fixed top-0 left-0 right-0 filter backdrop-blur-sm z-[500]">
-        <nav className="area relative flex justify-between items-center  ">
+      <nav className="fixed md:absolute top-0 left-0 right-0 z-[500]">
+        <nav className="relative w-[95%] mx-auto flex justify-between items-center  ">
           <a href="./" className="relative w-[60px]">
               <img src={Logo} alt="Juan Jose Ch" className="w-full"/>
           </a>
 
-          <button onClick={() => setNavMd(!navMd)} className={`block md:hidden text-3xl z-[500] ${styleNav? (navMd ? "text-white" :"text-black"): "text-white"}`}>{navMd ?<i className='bx bx-x'></i> :<i className='bx bx-menu'></i>}</button>
+          <button onClick={() => setNavMd(!navMd)} className={`block md:hidden text-3xl z-[500] ${navMd ? "text-white" : (styleNav ? "text-black" : "text-white")}`}>{navMd ?<i className='bx bx-x'></i> :<i className='bx bx-menu'></i>}</button>
           
           <ul className={`${navMd 
             ? "w-full h-screen flex flex-col space-y-5 justify-center items-center fixed top-0 left-0 text-xl opacity-100 bg-[#1a1a1aaa]" 
-            : "hidden"} transition-colors duration-500 md:h-[40px] md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs`}>
+            : "hidden"} transition-colors md:w-[490px] bg-redd-500 duration-500 md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs`}>
             
             {navSections.map((sections) => (
-             <li key={sections.text} className={`cursor-pointer transition-[color_font-size_font-height] duration-500 
-             ${sectionActive == sections.section  
-              ? (sections.section === "home"
-                ? "text-white hover:text-violet md:text-white md:text-sm " 
-                : (styleNav && "text-white hover:text-violet md:text-violet md:text-sm md:font-medium"))
-              : (styleNav? "text-white hover:text-violet md:text-black": "text-white   md:text-neutral-400")}`} 
-            onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll}>{sections.text}</li>
+             <li key={sections.text} className={`cursor-pointer relative text-neutral-400 hover:text-white  transition-[color] duration-500 `}
+            onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll} onMouseEnter={() => setStyleNav(sections.text)} onMouseLeave={() => setStyleNav(null)}>
+              <p className="">{sections.text}</p>
+              <div className={`absolute left-0 bottom-0 w-0 h-[1px] ${styleNav === sections.text ? "w-full" : null} transition-[width] ease-in-out duration-500 bg-white `}></div>
+              </li>
             ))}
-
+            
           </ul>
         </nav>
-
       </nav>
     )
   }
