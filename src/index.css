@@ -91,11 +91,12 @@
     @apply -translate-y-16 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
 }
-
+*{
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   background-color: #f3efef;
-  scroll-behavior: smooth;
 }
 body ::selection {
   background-color: #6845c7;

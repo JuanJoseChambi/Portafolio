@@ -67,9 +67,9 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
     return (
       <nav className="fixed md:absolute top-0 left-0 right-0 z-[500]">
         <nav className="relative w-[95%] mx-auto flex justify-between items-center  ">
-          <a href="./" className="relative w-[60px]">
-              <img src={Logo} alt="Juan Jose Ch" className="w-full"/>
-          </a>
+          <picture className="relative w-[60px] pointer-events-none">
+              <img src={Logo} alt="Juan Jose Ch" className="w-full select-none"/>
+          </picture>
 
           <button onClick={() => setNavMd(!navMd)} className={`block md:hidden text-3xl z-[500] ${navMd ? "text-white" : (styleNav ? "text-black" : "text-white")}`}>{navMd ?<i className='bx bx-x'></i> :<i className='bx bx-menu'></i>}</button>
           

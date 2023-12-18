@@ -13,14 +13,7 @@ function Proyectos({refProyectos}: RefProyectos) {
 
   const refScrollTitle = useRef(null)
 
-  
-
   const [infoProyect, setInfoProyect] = useState<Proyects | null>(null);
-
-  console.log(infoProyect);
-  
-
-  // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
   useFadeScrollY(refScrollTitle, "opacity-100 translate-y-0")
 
