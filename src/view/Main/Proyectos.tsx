@@ -1,10 +1,8 @@
-import { proyectsData } from "../../utilities/proyectsData/proyectsData";
-
 import { useRef, useState } from "react";
 import { tecnologias } from "../../assets/Tecnologias";
 import { useFadeScrollY } from "../../hooks/useFadeScrollY";
 import { Proyects } from "../../interfaces/interfaces";
-
+import { proyectsData } from "../../utilities/proyectsData/proyectsData";
 
 
 interface RefProyectos {
@@ -15,7 +13,14 @@ function Proyectos({refProyectos}: RefProyectos) {
 
   const refScrollTitle = useRef(null)
 
+  
+
   const [infoProyect, setInfoProyect] = useState<Proyects | null>(null);
+
+  console.log(infoProyect);
+  
+
+  // Imagenes a la informacion de las cards-------------------------------------------------------------------------------------------------------------------------
 
   useFadeScrollY(refScrollTitle, "opacity-100 translate-y-0")
 
@@ -134,5 +139,48 @@ function Proyectos({refProyectos}: RefProyectos) {
 }
 
 export default Proyectos;
+
+
+
+
+
+
+{/* <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopLeft]">
+            <img src={JCDV} alt="" className=" w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minTopCenter]">
+            <img src={RecipeFood} alt="" className="lg:h-full w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale  hover:grayscale-0 transition-[filter] duration-500 border-none flex justify-center items-end rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopRight]">
+            <img src={JCDV} alt="" className="w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigBotCenter]">
+            <img src={Tn} alt="" className="lg:h-full w-full"/>
+          </picture>
+
+          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minBotRight]">
+            <img src={MMarket} alt="" className="lg:h-full w-full" />
+          </picture>
+
+        </section> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
