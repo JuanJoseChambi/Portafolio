@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/LogoJC.png"
 import { useScrollSection } from "../../hooks/useScrollSections";
-import ButtonRedirectHome from "../ButtonRedirectHome/ButtonRedirectHome";
 
 
 interface RefPortafolio {
