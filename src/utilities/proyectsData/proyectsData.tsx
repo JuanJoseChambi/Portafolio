@@ -2,8 +2,9 @@ import MMarket from "../../assets/main/Proeyctos/MMarket.svg";
 import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
 import JCDV from "../../assets/main/Proeyctos/JCDV.svg";
 import Tn from "../../assets/main/Proeyctos/Tn.png";
+import { Proyects } from "../../interfaces/interfaces";
 
-export const proyectsData = [
+export const proyectsData : Proyects[] = [
     {
       tecnologias: [
         "HTML",

@@ -3,24 +3,9 @@ import { proyectsData } from "../../utilities/proyectsData/proyectsData";
 import { useRef, useState } from "react";
 import { tecnologias } from "../../assets/Tecnologias";
 import { useFadeScrollY } from "../../hooks/useFadeScrollY";
+import { Proyects } from "../../interfaces/interfaces";
 
-interface proyects {
-  tecnologias: (string | arrayTecnologias)[];
-  titulo: string;
-  fecha: string;
-  github?: null | string;
-  web?: null | string;
-  image: string;
-  gridArea: string;
-  descripcion: string;
-  short?: boolean;
-  infoTec?: null | arrayTecnologias[]
-}
 
-interface arrayTecnologias {
-  nombre:string;
-  img:JSX.Element;
-}
 
 interface RefProyectos {
   refProyectos:React.RefObject<HTMLDivElement>;
@@ -30,10 +15,10 @@ function Proyectos({refProyectos}: RefProyectos) {
 
   const refScrollTitle = useRef(null)
 
-  const [proyects, setProyects] = useState<proyects[]>(proyectsData);
+  // const [proyects, setProyects] = useState<proyects[]>(proyectsData);
   
 
-  const [infoProyect, setInfoProyect] = useState<proyects | null>(null);
+  const [infoProyect, setInfoProyect] = useState<Proyects | null>(null);
 
   console.log(infoProyect);
   
@@ -119,7 +104,7 @@ function Proyectos({refProyectos}: RefProyectos) {
         ) : (
           <section className="w-almostFull lg:w-[1100px] lg:h-[600px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
 
-            {proyects?.map((proyect, i) => {
+            {proyectsData?.map((proyect, i) => {
 
                 const tecnologiasProyecto = tecnologias.filter(tecno => proyect.tecnologias.some(tecnoProyect => tecno.nombre === tecnoProyect  ))
                 const infoTec = "infoTec"
@@ -157,50 +142,5 @@ function Proyectos({refProyectos}: RefProyectos) {
 }
 
 export default Proyectos;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopLeft]">
-            <img src={JCDV} alt="" className=" w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minTopCenter]">
-            <img src={RecipeFood} alt="" className="lg:h-full w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale  hover:grayscale-0 transition-[filter] duration-500 border-none flex justify-center items-end rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopRight]">
-            <img src={JCDV} alt="" className="w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigBotCenter]">
-            <img src={Tn} alt="" className="lg:h-full w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minBotRight]">
-            <img src={MMarket} alt="" className="lg:h-full w-full" />
-          </picture>
-
-        </section> */}
-
-
-
 
 
