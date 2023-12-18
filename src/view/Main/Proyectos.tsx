@@ -27,7 +27,8 @@ function Proyectos({refProyectos}: RefProyectos) {
   return (
     <section className="bg-[#d2d2d2]" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center py-16 space-y-20 bg-redd-500">
-        <article className="relative flex justify-center items-end scrollFadeTop " ref={refScrollTitle}>
+
+        <article className="relative flex justify-center items-end scrollFadeTop" ref={refScrollTitle}>
           <h2 className="text-[65px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
             PROYECTOS
           </h2>
