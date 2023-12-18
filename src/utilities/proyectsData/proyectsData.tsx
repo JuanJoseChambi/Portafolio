@@ -1,6 +1,7 @@
 import MMarket from "../../assets/main/Proeyctos/MMarket.svg";
 import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
 import JCDV from "../../assets/main/Proeyctos/JCDV.svg";
+import ProductoAPI from "../../assets/main/Proeyctos/ProductoAPI.png";
 import Tn from "../../assets/main/Proeyctos/Tn.png";
 import { Proyects } from "../../interfaces/interfaces";
 
@@ -55,8 +56,9 @@ export const proyectsData : Proyects[] = [
       fecha: "En Proceso - 2023",
       github: null,
       web: null,
-      image: JCDV,
+      image: ProductoAPI,
       gridArea: "bigTopRight",
+      short: true,
       descripcion: "Products API es una plataforma diseñada para el desarrollo web, ofreciendo una API de acceso libre que permite su utilización de manera gratuita por cualquier persona. Además, cuenta con un sistema API RESTful incorporado para facilitar la interacción y desarrollo por parte del desarrollador.",
     },
     {
