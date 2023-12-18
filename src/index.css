@@ -78,11 +78,15 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+  .wrapText {
+    overflow-wrap: break-word; /* Rompe la palabra si es demasiado larga */
+    word-wrap: break-word;
+  }
   .scrollFadeLeft {
-    @apply -translate-x-10 opacity-0 transition-[transform_opacity] duration-[1.3s]
+    @apply md:-translate-x-10 md:opacity-0 md:transition-[transform_opacity] md:duration-[1.3s]
   }
   .scrollFadeRight {
-    @apply translate-x-10 opacity-0 transition-[transform_opacity] duration-[1.3s]
+    @apply md:translate-x-10 md:opacity-0 md:transition-[transform_opacity] md:duration-[1.3s]
   }
   .scrollFadeBottom {
     @apply translate-y-16 opacity-0 transition-[transform_opacity] duration-[1.3s]

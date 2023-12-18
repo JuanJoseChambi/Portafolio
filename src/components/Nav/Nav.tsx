@@ -65,7 +65,7 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
     ]
 
     return (
-      <nav className="fixed md:absolute top-0 left-0 right-0 z-[500]">
+      <nav className="fixed w-full md:absolute top-0 z-[500] bg-redd-500">
         <nav className="relative w-[95%] mx-auto flex justify-between items-center  ">
           <picture className="relative w-[60px] pointer-events-none">
               <img src={Logo} alt="Juan Jose Ch" className="w-full select-none"/>
