@@ -59,7 +59,7 @@ export const proyectsData : Proyects[] = [
       image: ProductoAPI,
       gridArea: "bigTopRight",
       short: true,
-      descripcion: "Products API es una plataforma diseñada para el desarrollo web, ofreciendo una API de acceso libre que permite su utilización de manera gratuita por cualquier persona. Además, cuenta con un sistema API RESTful incorporado para facilitar la interacción y desarrollo por parte del desarrollador.",
+      descripcion: "Products API es una plataforma dedicada al desarrollo web, proporcionando una API de acceso libre disponible de forma gratuita para cualquier persona interesada en una API pública de productos. Esta herramienta es ideal para la creación de aplicaciones E-commerce, facilitando la integración de datos esenciales para este tipo de proyectos.",
     },
     {
       tecnologias: [

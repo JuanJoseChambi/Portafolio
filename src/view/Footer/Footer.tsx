@@ -34,8 +34,8 @@ function Footer({refFooter}:refFooter) {
 
           </section>
 
-          <picture className="w-[200px] flex justify-center items-center order-1 md:order-2 xl:mr-36 -z-10 bg-purpled-500 scrollFadeRight" ref={refImageLogo}>
-            <img src={logoJC} alt="" className="w-full" />
+          <picture className="w-[200px] flex justify-center items-center order-1 md:order-2 xl:mr-36 -z-10 bg-purpled-500 scrollFadeRight pointer-events-none" ref={refImageLogo}>
+            <img src={logoJC} alt="" className="w-full select-none" />
           </picture>
         </nav>
         
