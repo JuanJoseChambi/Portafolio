@@ -78,10 +78,9 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
             : "hidden"} transition-colors md:w-[490px] bg-redd-500 duration-500 md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs`}>
             
             {navSections.map((sections) => (
-             <li key={sections.text} className={`cursor-pointer relative text-neutral-400 hover:text-white  transition-[color] duration-500 `}
-            onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll} onMouseEnter={() => setStyleNav(sections.text)} onMouseLeave={() => setStyleNav(null)}>
-              <p className="">{sections.text}</p>
-              <div className={`absolute left-0 bottom-0 w-0 h-[1px] ${styleNav === sections.text ? "w-full" : null} transition-[width] ease-in-out duration-500 bg-white `}></div>
+              <li key={sections.text} className={`cursor-pointer relative text-neutral-400 hover:text-white  transition-[color] duration-500 `} onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll} onMouseEnter={() => setStyleNav(sections.text)} onMouseLeave={() => setStyleNav(null)}>
+                <p className="">{sections.text}</p>
+                <div className={`absolute left-0 bottom-0 w-0 h-[1px] ${styleNav === sections.text ? "w-full" : null} transition-[width] ease-in-out duration-500 bg-white `}></div>
               </li>
             ))}
             

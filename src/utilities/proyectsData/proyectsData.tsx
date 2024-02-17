@@ -1,7 +1,7 @@
 import MMarket from "../../assets/main/Proeyctos/MMarket.svg";
 import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
 import JCDV from "../../assets/main/Proeyctos/JCDV.svg";
-import ProductoAPI from "../../assets/main/Proeyctos/ProductoAPI.png";
+import ProductoAPI from "../../assets/main/Proeyctos/ProductAPI.png";
 import Tn from "../../assets/main/Proeyctos/Tn.png";
 import { Proyects } from "../../interfaces/interfaces";
 
@@ -53,13 +53,13 @@ export const proyectsData : Proyects[] = [
         "GITHUB",
       ],
       titulo: "Products ApI",
-      fecha: "En Proceso - 2023",
-      github: null,
-      web: null,
+      fecha: "1 Nov - 14 Feb 2023/2024",
+      github: "https://github.com/JuanJoseChambi/product-api",
+      web: "https://product-api-mu-seven.vercel.app/",
       image: ProductoAPI,
       gridArea: "bigTopRight",
       short: true,
-      descripcion: "Products API es una plataforma dedicada al desarrollo web, proporcionando una API de acceso libre disponible de forma gratuita para cualquier persona interesada en una API pública de productos. Esta herramienta es ideal para la creación de aplicaciones E-commerce, facilitando la integración de datos esenciales para este tipo de proyectos.",
+      descripcion: "Products API es una plataforma de desarrollo web que proporciona una API gratuita para proyectos E-commerce. Además de ofrecer datos esenciales, también se destaca como una herramienta de documentación para desarrolladores, brindando oportunidades de práctica en áreas como autenticación, billeteras virtuales y seguridad. En resumen, es una solución integral para quienes buscan acceder a una API de productos y mejorar sus habilidades de desarrollo.",
     },
     {
       tecnologias: [
