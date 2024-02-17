@@ -61,7 +61,7 @@ function Habilidades({refHabilidades}:RefHabilidades) {
               </article>
               <article className="w-full h-[75px] flex flex-wrap justify-evenly text-lg font-light items-center bg-redd-500">
                 <p className="w-[180px] text-center firstLetter">Trabajo en Equipo</p>
-                <p className="w-[180px] text-center firstLetter">Perseverancia</p>
+                <p className="w-[180px] text-center firstLetter">Resiliencia</p>
               </article>
 
           </article>
