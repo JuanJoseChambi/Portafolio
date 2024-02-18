@@ -28,7 +28,8 @@ export default {
         "medium":"824px"
       },
       textColor: {
-        "violet":"#6845c7"
+        "violet":"#6845c7",
+        "grey-title":"#7A857A"
       },
       backgroundColor: {
         "violet":"#6845c7"

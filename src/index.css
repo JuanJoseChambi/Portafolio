@@ -94,6 +94,9 @@
   .scrollFadeTop {
     @apply -translate-y-16 opacity-0 transition-[transform_opacity] duration-[1.3s]
   }
+  .scroolStyle{
+    scrollbar-width: none;
+  }
 }
 *{
   scroll-behavior: smooth;
