@@ -12,7 +12,7 @@ function TimeLine() {
            <section className='space-y-3'>
                 <article className='pl-5 medium:pl-0 w-full'>
                      <h2 className='font-semibold text-lg tracking-wider'>Autodidacta</h2>
-                      <p className='text-xs'>20 Jun - 25 Dic - 2023</p>
+                      <p className='text-xs'>24 Sep / 2022 - Actualidad</p>
                 </article>   
                 <p className='text-sm font-light pr-8'>Me formé de manera autodidacta a través de cursos en YouTube, documentaciones y otras plataformas, explorando tecnologías como Tailwind, Sass, MongoDB y TypeScript. Ahora, persigo un conocimiento Full-stack y planeo aprender Angular pronto. Mi enfoque sigue centrado en el crecimiento constante en el desarrollo web</p>
            </section>
@@ -27,7 +27,7 @@ function TimeLine() {
            <section className='space-y-3'>
                 <article className='pl-5 medium:pl-0 w-full'>
                      <h2 className='font-semibold text-lg tracking-wider'>SoyHenry</h2>
-                      <p className='text-xs'>20 Jun - 25 Dic - 2023</p>
+                      <p className='text-xs'>08 May - 25 Ago - 2023</p>
                 </article>   
                 <p className='text-sm font-light pr-8'>SoyHenry conto con 800+ horas de formación en tecnologías como React, Redux, JavaScript, Node, Express y PostgreSQL, así como habilidades blandas como trabajo en equipo y aprendizaje ágil. Reforcé mis conocimientos, adquirí una visión clara del desarrollo y ahora, entusiasta, continúo mi aprendizaje de manera autodidacta</p>
            </section>
