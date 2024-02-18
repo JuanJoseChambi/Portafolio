@@ -1,5 +1,6 @@
 export interface Proyects {
     tecnologias: (string | arrayTecnologias)[];
+    status:string;
     titulo: string;
     fecha: string;
     github?: null | string;
@@ -11,7 +12,8 @@ export interface Proyects {
     infoTec?: null | arrayTecnologias[]
   }
   
-  interface arrayTecnologias {
+export interface arrayTecnologias {
     nombre:string;
     img:JSX.Element;
+    
   }
