@@ -7,9 +7,12 @@ interface TooltipProp {
 }
 
 function Tooltip({children}: TooltipProp) {
-  return (
-    <div>{children}</div>
-  )
+    return (
+        <>
+            <label></label>
+            <div>{children}</div>
+        </>
+    )
 }
 
 export default Tooltip

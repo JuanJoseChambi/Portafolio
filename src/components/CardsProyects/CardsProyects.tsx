@@ -11,10 +11,10 @@ interface CardsProyectsProp {
 function CardsProyects({proyect, firstProyect}:CardsProyectsProp) {
     const [tecnologiasProyecto, setTecnologiasProyecto] = useState<arrayTecnologias[]>([])
 
-      useEffect(() => {
+    useEffect(() => {
     const tec = tecnologias.filter(infoTec => proyect.tecnologias.some(nameTec => nameTec === infoTec.nombre));
     setTecnologiasProyecto(tec);
-  }, []);
+    }, []);
 
     
   return (
