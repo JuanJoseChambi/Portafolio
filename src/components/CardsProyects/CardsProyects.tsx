@@ -34,10 +34,10 @@ function CardsProyects({proyect, firstProyect}:CardsProyectsProp) {
                 </article>
                 <p className="text-xs font-light text-grey-title">{proyect.fecha}</p>
             </article>
-            <ul className="flex space-x-2">
+            <ul className="flex space-x-2 bg-redd-500 flex-wrap medium:space-x-3 max-medium:my-4">
                 
                 {tecnologiasProyecto.map((tecno) => (
-                        <div key={tecno.nombre} className="w-[20px] hover:-translate-y-2 my-1 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
+                        <div key={tecno.nombre} className="w-[20px] h-[20px] hover:-translate-y-2 my-1 medium:my-4 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-transform duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
                 ))}
             
             </ul>
