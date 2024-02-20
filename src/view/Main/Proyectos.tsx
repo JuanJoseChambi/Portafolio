@@ -1,8 +1,7 @@
-import { useRef, useState } from "react";
-import { tecnologias } from "../../assets/Tecnologias";
 import { useFadeScrollY } from "../../hooks/useFadeScrollY";
-import { Proyects } from "../../interfaces/interfaces";
 import { proyectsData } from "../../utilities/proyectsData/proyectsData";
+import CardsProyects from "../../components/CardsProyects/CardsProyects";
+import { useRef } from "react";
 
 
 interface RefProyectos {
@@ -13,15 +12,15 @@ function Proyectos({refProyectos}: RefProyectos) {
 
   const refScrollTitle = useRef(null)
 
-  const [infoProyect, setInfoProyect] = useState<Proyects | null>(null);
 
   useFadeScrollY(refScrollTitle, "opacity-100 translate-y-0")
+
 
   return (
     <section className="bg-[#d2d2d2]" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center py-16 space-y-20 bg-redd-500">
 
-        <article className="relative flex justify-center items-end scrollFadeTop" ref={refScrollTitle}>
+        <article className="relative flex justify-center items-end scrollFadeTop bg-redd-500" ref={refScrollTitle}>
           <h2 className="text-[65px] sm:text-8xl text-start bg-greenn-500 text-[#adadad] select-none">
             PROYECTOS
           </h2>
@@ -30,7 +29,26 @@ function Proyectos({refProyectos}: RefProyectos) {
           </h2>
         </article>
 
-        {infoProyect ? (
+        <section className="w-full h-auto flex justify-between items-center flex-wrap gap-6">
+
+          {proyectsData.map((proyect) => (
+            <CardsProyects key={proyect.titulo} proyect={proyect} />
+          ))}
+          
+
+        </section>
+
+      </section>
+    </section>
+  );
+}
+
+export default Proyectos;
+
+
+
+
+ {/* {infoProyect ? (
           <section className={`w-[95%] min-h-[400px] relative flex flex-col lg:flex-row justify-between items-center space-y-10 lg:space-y-0 opacity-0 transition-opacity duration-1000
           ${infoProyect.titulo ? "opacity-100 " : null }`} >
             
@@ -126,45 +144,7 @@ function Proyectos({refProyectos}: RefProyectos) {
               )
             })}
           </section>
-        )}
-      </section>
-    </section>
-  );
-}
-
-export default Proyectos;
-
-
-
-
-
-
-{/* <section className="w-almostFull lg:w-[850px] lg:h-[500px] grid proyectos lg:grid-cols-3 lg:grid-rows-3 gap-7 lg:gap-4 lg:proyectos-medium bg-redd-500">
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopLeft]">
-            <img src={JCDV} alt="" className=" w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minTopCenter]">
-            <img src={RecipeFood} alt="" className="lg:h-full w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale  hover:grayscale-0 transition-[filter] duration-500 border-none flex justify-center items-end rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigTopRight]">
-            <img src={JCDV} alt="" className="w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:bigBotCenter]">
-            <img src={Tn} alt="" className="lg:h-full w-full"/>
-          </picture>
-
-          <picture className="max-lg:max-h-80 relative grayscale flex justify-center items-start border-none hover:grayscale-0 transition-[filter] duration-500 rounded-xl overflow-hidden shadow-[15px_15px_15px_0px_#696969] border [grid-area:minBotRight]">
-            <img src={MMarket} alt="" className="lg:h-full w-full" />
-          </picture>
-
-        </section> */}
-
-
-
+        )} */}
 
 
 
