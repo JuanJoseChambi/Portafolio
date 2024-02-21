@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import logoJC from "../../assets/LogoJC.png"
 import { useFadeScrollY } from "../../hooks/useFadeScrollY"
+import ButtonLink from "../../components/ButtonLink/ButtonLink"
 
 interface refFooter {
   refFooter:React.RefObject<HTMLDivElement>
@@ -21,21 +22,20 @@ function Footer({refFooter}:refFooter) {
     <footer className="bg-redd-500 " ref={refFooter}>
 
         <nav className="area flex flex-col md:flex-row justify-between items-center min-h-[200px] w-almostFull  bg-lim-500">
-          <section className="w-full md:w-[600px] min-h-[200px] flex flex-col justify-center items-center md:items-start space-y-6 order-2 md:order-1 xl:ml-10 bg-grayd-500 scrollFadeLeft" ref={refTextContact}>
-            <h2 className="text-3xl font-regular">Contactame</h2>
-            <p className="text-sm font-light text-center md:text-start  bg-purplde-500">Si estás en la búsqueda de un colaborador motivado y comprometido para futuros proyectos, estoy disponible para ser parte de tu equipo. Estoy abierto a explorar oportunidades de colaboración. Si consideras que puedo aportar valor a tu equipo, no dudes en ponerte en contacto. Hasta pronto.
+          <section className="w-full md:w-[600px] min-h-[200px] flex flex-col justify-center items-center md:items-start space-y-6 my-3 order-2 md:order-1 xl:ml-10 bg-grayd-500 scrollFadeLeft" ref={refTextContact}>
+            <h2 className="text-3xl font-regular bg-redd-500">Contactame</h2>
+            <p className="text-sm font-light text-center md:text-start  bg-purpled-500">Si estás en la búsqueda de un colaborador motivado y comprometido para futuros proyectos, estoy disponible para ser parte de tu equipo. Estoy abierto a explorar oportunidades de colaboración. Si consideras que puedo aportar valor a tu equipo, no dudes en ponerte en contacto. Hasta pronto.
             </p>
 
             <ul className="text-[30px] flex justify-center items-center space-x-10 bg-redd-500">
-              <li className=""><a target="_blank" className="w-12 h-12 cursor-pointer text-center flex justify-center items-center rounded-full hover:text-violet transition-colors duration-500 bg-red-" href="https://github.com/JuanJoseChambi"><i className='bx bxl-linkedin' ></i></a></li>
-              <li className=""><a target="_blank" className="w-12 h-12 cursor-pointer text-center flex justify-center items-center rounded-full hover:text-violet transition-colors duration-500 bg-red-" href="https://www.linkedin.com/in/juanjosechambi/"><i className='bx bxl-github' ></i></a></li>
-              <li></li>
+              <ButtonLink icon="bx bxl-github" link="https://github.com/JuanJoseChambi" sizeIcon="text-3xl" duration="500"/>
+              <ButtonLink icon="bx bxl-linkedin" link="https://www.linkedin.com/in/juanjosechambi/" sizeIcon="text-3xl" duration="500"/>
             </ul>
 
           </section>
 
           <picture className="w-[200px] flex justify-center items-center order-1 md:order-2 xl:mr-36 -z-10 bg-purpled-500 scrollFadeRight pointer-events-none" ref={refImageLogo}>
-            <img src={logoJC} alt="" className="w-full select-none" />
+            <img src={logoJC} alt="Logo JC" className="w-full select-none" />
           </picture>
         </nav>
         
