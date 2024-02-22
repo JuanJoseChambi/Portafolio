@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import logo from "../../assets/LogoJC.png"
 import { useFadeScrollY } from "../../hooks/useFadeScrollY"
 import IconLinkHDR from "../../components/IconLinkHDR/IconLinkHDR"
