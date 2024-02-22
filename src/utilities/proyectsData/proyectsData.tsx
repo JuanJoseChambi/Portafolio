@@ -26,7 +26,7 @@ export const proyectsData : Proyects[] = [
       image: ProductoAPI,
       gridArea: "bigTopRight",
       short: true,
-      descripcion: "Products API es una robusta plataforma de desarrollo web que ofrece una API gratuita especialmente diseñada para proyectos E-commerce. Además de proporcionar datos esenciales para tu proyecto, se destaca como una herramienta de documentación integral para desarrolladores. Este servicio va más allá de simplemente suministrar información; brinda oportunidades valiosas para practicar y perfeccionar habilidades en áreas cruciales como autenticación, billeteras virtuales y seguridad. <br><br> En resumen, Products API se presenta como una solución integral y versátil para aquellos que buscan no solo acceder a una API de productos, sino también potenciar sus habilidades de desarrollo web.",
+      descripcion: "Products API es una plataforma de desarrollo web que ofrece una API gratuita especialmente diseñada para proyectos E-commerce. Además de proporcionar datos esenciales para tu proyecto, se destaca como una herramienta de documentación integral para desarrolladores. Este servicio va más allá de simplemente suministrar información; brinda oportunidades valiosas para practicar y perfeccionar habilidades en áreas cruciales como autenticación, billeteras virtuales y seguridad. <br><br> En resumen, Products API se presenta como una solución integral y versátil para aquellos que buscan no solo acceder a una API de productos, sino también potenciar sus habilidades de desarrollo web.",
     },
     // {
     //   tecnologias: [
