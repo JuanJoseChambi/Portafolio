@@ -28,5 +28,3 @@ function Educacion({refEducacion}:RefSobreMi) {
 }
 
 export default Educacion
-
-// py-10 medium:pb-10 medium:py-0

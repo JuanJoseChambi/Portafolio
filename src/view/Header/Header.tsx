@@ -1,12 +1,15 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import logo from "../../assets/LogoJC.png"
 import { useFadeScrollY } from "../../hooks/useFadeScrollY"
+import IconLinkHDR from "../../components/IconLinkHDR/IconLinkHDR"
 
 interface RefHeader {
   refHeader:React.RefObject<HTMLDivElement>
 }
 
+
 function Header({refHeader}:RefHeader) {
+
 
   const refTitleXl = useRef(null)
   const refTitleXS = useRef(null)
@@ -16,7 +19,14 @@ function Header({refHeader}:RefHeader) {
 
 
   return (
-    <header className="bg-neutral-900 max-md:relative h-xl  overflow-hidden flex justify-center items-center " ref={refHeader}>
+    <header className="bg-neutral-900 relative max-md:relative h-xl  overflow-hidden flex justify-center items-center " ref={refHeader}>
+      <ul className="w-[95%] h-[160px] z-10 absolute bottom-0 mx-auto space-y-4 text-white bg-redd-500 max-medium:hidden">
+        <IconLinkHDR text="Gmail" icon="bx bxl-gmail" link="https://mail.google.com/mail/u/0/?fs=1&to=chambijuanjose05@gmail.com&tf=cm"/>
+        <IconLinkHDR text="Linkedin" icon="bx bxl-linkedin" link="https://www.linkedin.com/in/juanjosechambi/"/>
+        <IconLinkHDR text="Github" icon="bx bxl-github" link="https://github.com/JuanJoseChambi"/>
+        <div className="w-[1px] h-[25px] ml-[18px] absolute bottom-0 bg-white hover:bg-violet"></div>
+
+      </ul>
         <section className="area flex flex-col md:flex-row justify-between items-center space-y-10 md:relative bg-redd-500">
 
           <article className="bg-limee-500 z-10">
