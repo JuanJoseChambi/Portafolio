@@ -6,10 +6,9 @@ import Tooltip from "../Tooltip/Tooltip"
 
 interface CardsProyectsProp {
     proyect:Proyects
-    firstProyect?:boolean
 }
 
-function CardsProyects({proyect, firstProyect}:CardsProyectsProp) {
+function CardsProyects({proyect, }:CardsProyectsProp) {
     const [tecnologiasProyecto, setTecnologiasProyecto] = useState<arrayTecnologias[]>([])
 
     useEffect(() => {
@@ -19,9 +18,9 @@ function CardsProyects({proyect, firstProyect}:CardsProyectsProp) {
 
     
   return (
-    <article className={`${firstProyect ? "basis-auto" : "basis-[600px]"} h-[350px] bg-[#fcfcfc] flex justify-between items-center flex-row flex-1 rounded-lg  shadow-[5px_5px_25px_0_#3B3A3A]`}>    
+    <article className={`w-full medium:basis-[600px] h-[350px] bg-[#fcfcfc] flex justify-between items-center flex-row flex-1 rounded-lg shadow-[5px_5px_25px_0_#3B3A3A]`}>    
 
-        <picture className="w-[350px] h-full relative flex justify-center items-start bg-redd-500 overflow-hidden" >
+        <picture className="w-[350px] h-full relative flex justify-center items-start bg-redd-500 overflow-hidden rounded-[8px_0px_0px_8px]" >
             <img src={proyect.image} alt="" className="object-cover w-full h-full bg-top hover:scale-110 transition-transform duration-500"/>
         </picture>  
         
