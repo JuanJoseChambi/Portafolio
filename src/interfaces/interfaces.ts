@@ -1,6 +1,6 @@
 export interface Proyects {
     tecnologias: (string | arrayTecnologias)[];
-    status?:string;
+    status:string;
     titulo: string;
     fecha: string;
     github?: null | string;

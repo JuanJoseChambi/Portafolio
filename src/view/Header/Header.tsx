@@ -7,7 +7,6 @@ interface RefHeader {
   refHeader:React.RefObject<HTMLDivElement>
 }
 
-
 function Header({refHeader}:RefHeader) {
 
 
