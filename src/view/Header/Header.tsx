@@ -35,7 +35,7 @@ function Header({refHeader}:RefHeader) {
               <h2 className="text-8xl text-center text-[#adadad8c] select-none scrollFadeLeft" ref={refTitleXl}>JUAN JOSE CHAMBI</h2>
               <h2 className="absolute text-5xl text-center text-white font-bold tracking-widest drop-shadow-[10px_5px_5px_#262626] scrollFadeRight" ref={refTitleXS}>JUAN JOSE CHAMBI</h2>
             </article>
-            <h1 className="max-md:mb-10 font-semibold tracking-widest w-full text-end text-neutral-700">DESARROLLADOR FRONTEND<br></br>FULLSTACK</h1>
+            <h1 className="max-md:mb-10 font-semibold tracking-widest w-full text-end text-neutral-700">DESARROLLADOR FRONTEND<br></br>BACKEND</h1>
 
           </article>
 

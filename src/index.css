@@ -97,6 +97,21 @@
   .scroolStyle{
     scrollbar-width: none;
   }
+  .no-wrap {
+    text-wrap:nowrap;
+  }
+  .text-clipping{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .text-clipping-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 *{
   scroll-behavior: smooth;

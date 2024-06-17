@@ -75,11 +75,11 @@ function Nav({refHeader, refSobreMi, refProyectos, refHabilidades, refServicios,
           
           <ul className={`${navMd 
             ? "w-full h-screen flex flex-col space-y-5 justify-center items-center fixed top-0 left-0 text-xl opacity-100 bg-[#1a1a1aaa]" 
-            : "hidden"} transition-colors md:w-[490px] bg-redd-500 duration-500 md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 md:font-light md:text-xs`}>
+            : "hidden"} transition-colors md:w-[490px] bg-redd-500 duration-500 md:px-3 md:relative md:flex md:justify-between md:items-center md:space-x-5 font-light md:text-xs`}>
             
             {navSections.map((sections) => (
-              <li key={sections.text} className={`cursor-pointer relative text-neutral-400 hover:text-white  transition-[color] duration-500 `} onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll} onMouseEnter={() => setStyleNav(sections.text)} onMouseLeave={() => setStyleNav(null)}>
-                <p className="">{sections.text}</p>
+              <li key={sections.text} className={`cursor-pointer relative text-neutral-500 hover:text-white transition-[color] duration-500 `} onClick={navMd ? () => {sections.scroll(); setTimeout(() => setNavMd(!navMd), 500)} : sections.scroll} onMouseEnter={() => setStyleNav(sections.text)} onMouseLeave={() => setStyleNav(null)}>
+                <p className="no-wrap">{sections.text}</p>
                 <div className={`absolute left-0 bottom-0 w-0 h-[1px] ${styleNav === sections.text ? "w-full" : null} transition-[width] ease-in-out duration-500 bg-white `}></div>
               </li>
             ))}

@@ -17,7 +17,7 @@ function Proyectos({refProyectos}: RefProyectos) {
 
 
   return (
-    <section className="bg-[#d2d2d2]" ref={refProyectos}>
+    <section className="" ref={refProyectos}>
       <section className="area min-h-xl flex flex-col justify-center items-center py-16 space-y-20 bg-redd-500">
 
         <article className="relative flex justify-center items-end scrollFadeTop bg-redd-500" ref={refScrollTitle}>
@@ -29,7 +29,7 @@ function Proyectos({refProyectos}: RefProyectos) {
           </h2>
         </article>
 
-        <section className="w-full h-auto flex justify-between items-center flex-wrap gap-6">
+        <section className="w-full h-auto flex justify-between items-center flex-col flex-wrap gap-6">
 
           {proyectsData.map((proyect) => (
             <CardsProyects key={proyect.titulo} proyect={proyect} />
