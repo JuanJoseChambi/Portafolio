@@ -1,11 +1,34 @@
 import MMarket from "../../assets/main/Proeyctos/MMarket.svg";
-import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
+// import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
 // import JCDV from "../../assets/main/Proeyctos/JCDV.svg";
 import ProductoAPI from "../../assets/main/Proeyctos/ProductAPI.png";
 import Tn from "../../assets/main/Proeyctos/Tn.png";
 import { Proyects } from "../../interfaces/interfaces";
 
 export const proyectsData : Proyects[] = [
+    // {
+    //   tecnologias: [
+    //     "HTML",
+    //     "REACT",
+    //     "TYPESCRIPT",
+    //     "REDUX",
+    //     "TAILWIND",
+    //     "NODE",
+    //     "EXPRESS",
+    //     "POSTGRESQL",
+    //     "JAVASCRIPT",
+    //     "GITHUB",
+    //     "GIT"
+    //   ],
+    //   status:"Desactivo",
+    //   titulo: "JCDV",
+    //   fecha: "26 - Oct - 13 Nov - 2023",
+    //   github: "https://github.com/JuanJoseChambi/IJCDV",
+    //   web: null,
+    //   image: JCDV,
+    //   gridArea: "bigTopLeft",
+    //   descripcion: "JCDV (Jesús Camino De Vida) es un proyecto que se centró en la aplicación práctica de nuevas tecnologías. Aunque, por el momento, solo se cuenta con la sección de inicio, esta etapa ha sido fundamental para consolidar y adquirir conocimientos y destrezas en el uso de la tecnología Tailwind, la cual he venido empleando desde ese momento.",
+    // },
     {
       tecnologias: [
         "HTML",
@@ -66,28 +89,28 @@ export const proyectsData : Proyects[] = [
       short: true,
       descripcion: "TN es un proyecto que se materializa como un sitio web diseñado para gestionar tareas y notas. Este utiliza almacenamiento local, específicamente localstorage.<br> <br> El sitio proporciona funcionalidades clave, tales como la capacidad de crear, editar y eliminar tareas y notas. También cuenta con opciones para filtrar y buscar entre tus notas y tareas, asignar fechas y horarios, así como marcar y señalar las tareas y notas completadas. Además, destaca por su diseño responsive para adaptarse eficazmente a diferentes dispositivos.",
     },
-    {
-      tecnologias: [
-        "HTML",
-        "CSS",
-        "REACT",
-        "JAVASCRIPT",
-        "REDUX",
-        "NODE",
-        "EXPRESS",
-        "POSTGRESQL",
-        "GITHUB",
-      ],
-      status:"Desactivo",
-      titulo: "Recipe Food",
-      fecha: "03 Jul - 20 Jul - 2023",
-      github: "https://github.com/JuanJoseChambi/Recipe-Food",
-      web: null,
-      image: RecipeFood,
-      gridArea: "minTopCenter",
-      short: true,
-      descripcion: "Recipe Food fue un proyecto académico centrado en la creación de una plataforma web que ofrece información detallada sobre recetas, ingredientes y datos nutricionales.<br> <br> Este proyecto Fullstack fue desarrollado de manera individual, utilizando tecnologías clave como React, Node.js, Express y PostgreSQL. Además, incorporó un sistema API RESTful para mejorar la interacción y accesibilidad de los datos.",
-    },
+    // {
+    //   tecnologias: [
+    //     "HTML",
+    //     "CSS",
+    //     "REACT",
+    //     "JAVASCRIPT",
+    //     "REDUX",
+    //     "NODE",
+    //     "EXPRESS",
+    //     "POSTGRESQL",
+    //     "GITHUB",
+    //   ],
+    //   status:"Desactivo",
+    //   titulo: "Recipe Food",
+    //   fecha: "03 Jul - 20 Jul - 2023",
+    //   github: "https://github.com/JuanJoseChambi/Recipe-Food",
+    //   web: null,
+    //   image: RecipeFood,
+    //   gridArea: "minTopCenter",
+    //   short: true,
+    //   descripcion: "Recipe Food fue un proyecto académico centrado en la creación de una plataforma web que ofrece información detallada sobre recetas, ingredientes y datos nutricionales.<br> <br> Este proyecto Fullstack fue desarrollado de manera individual, utilizando tecnologías clave como React, Node.js, Express y PostgreSQL. Además, incorporó un sistema API RESTful para mejorar la interacción y accesibilidad de los datos.",
+    // },
     {
       tecnologias: [
         "HTML",

@@ -16,7 +16,7 @@ function Educacion({refEducacion}:RefSobreMi) {
             <h2 className="text-lg font-semibold tracking-spacing mb-10">EDUCACION</h2>
             <ul className="bg-gren-500 min-w-[60%] min-h-60 mx-auto flex flex-col medium:flex-row justify-center items-start space-y-5 medium:space-y-0 bg-redd-500">
               <TimeLine title="Secundaria" date="01 Mar / 2018 - 15 Dic / 2022" description="
-                Titulado secundario con Bachiller orientado en Ciencias Sociales y Humanidades por el colegio EEM N°4 DE 19 Homero Manzi, donde he adquirido una sólida formación académica que ha enriquecido mi comprensión y apreciación de las complejidades inherentes a las disciplinas sociales y humanísticas."/>
+                Titulado secundario con Bachiller orientado en Ciencias Sociales y Humanidades por el colegio EEM N°4 DE 19 Homero Manzi, formación centrada en el análisis de la sociedad, la cultura y el comportamiento humano."/>
               
               <TimeLine title="SoyHenry" date="08 May - 25 Ago - 2023" description="SoyHenry conto con 800+ horas de formación en tecnologías como React, Redux, JavaScript, Node, Express y PostgreSQL, así como habilidades blandas como trabajo en equipo y aprendizaje ágil. Reforcé mis conocimientos, adquirí una visión clara del desarrollo y ahora, entusiasta, continúo mi aprendizaje de manera autodidacta"/>
               

@@ -10,8 +10,8 @@ export const servicesData = [
     info: "Backend Junior centrado en impulsar tus proyectos. Desarrollo soluciones sólidas y eficientes para garantizar un rendimiento óptimo. Mi compromiso con el aprendizaje continuo y la evolución constante.",
   },
   {
-    title: "FULLSTACK",
-    icon: "bx bx-check-double",
-    info: "Fullstack Junior, fusionando diseño atractivo con robustez backend. Creo soluciones integrales y eficientes, comprometido con la constante optimización en todos los aspectos del desarrollo y mejora profesional continua.",
+    title: "DISEÑO \n REDISEÑO",
+    icon: "bx bx-palette",
+    info: "Creo y actualizo sitios web modernos y funcionales, enfocados en una excelente experiencia de usuario y diseño responsivo. Mejora tu presencia en línea con un sitio atractivo y eficiente.",
   },
 ];

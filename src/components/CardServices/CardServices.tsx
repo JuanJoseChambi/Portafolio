@@ -31,7 +31,7 @@ function CardServices({title, icon, info}:CardProps) {
         <i className={`text-8xl textDegrade ${icon}`}></i>
         <article className="flex justify-center items-center space-x-2 bg-redd-600">
             <article className="text-lg relative font-semibold tracking-spacing firstLetter">
-                <p>{title}</p>
+                <pre>{title}</pre>
                 <div className={`absolute bottom-0 w-0 h-[1px] ${style?"w-full" :null} transition-[width] duration-1000 bg-violet`}></div>
             </article>
         </article>
