@@ -18,23 +18,23 @@ function CardsProyects({proyect, }:CardsProyectsProp) {
 
     // text-[#b1b1b1]    
   return (
-    <section className="w-full min-h-60 flex justify-center items-center sm:justify-start sm:items-start flex-col sm:flex-row gap-x-4 bg-greend-200">
-        <picture className="area h-[240px] sm:w-[240px] sm:h-[240px] flex justify-center overflow-hidden rounded-xl bg-red-500">
+    <section className="w-full min-h-60 flex justify-center items-center sm:justify-start sm:items-start flex-col sm:flex-row gap-y-1 sm:gap-x-4 bg-greend-200">
+        <picture className="area h-[240px] sm:w-[240px] sm:h-[240px] shadow-lg shadow-neutral-500 flex justify-center overflow-hidden rounded-xl bg-redd-500">
             <img src={proyect.image} alt="" className="w-full h-full object-cover object-top"/>
         </picture>
-        <section className="area sm:w-[70%] h-full flex justify-between items-center flex-col bg-redd-500">
+        <section className="area sm:w-[70%] h-full flex justify-between items-center flex-col gap-y-1 bg-redd-500">
             <div className="w-full relative py-2 flex justify-start items-center">
                 <h3 style={{fontSize:"clamp(50px, 8vw, 80px)"}} className="text-clipping font-bold text-7xl tracking-widest text-[#d9d9d9]">{proyect.titulo.toUpperCase()}</h3>
-                <h3 style={{fontSize:"clamp(40px, 8vw, 50px)"}} className="font-extrabold text-5xl absolute text-neutral-800">{proyect.titulo.toUpperCase()}</h3>
+                <h3 style={{fontSize:"clamp(25px, 8vw, 50px)"}} className="font-extrabold text-5xl absolute text-neutral-800">{proyect.titulo.toUpperCase()}</h3>
             </div>
             <p className="text-clipping-2 font-light">{proyect.descripcion}</p>
-            <div className="w-full flex justify-between items-center flex-wrap bg-blued-500">
+            <div className="w-full flex justify-between items-center flex-wrap gap-y-2 bg-blued-500">
                 <div className="w-full md:min-w-[450px] flex justify-center sm:justify-start items-center flex-wrap gap-x-4 bg-greend-500">
                     {tecnologiasProyecto.map((tecno) => (
                         <div key={tecno.nombre} className="w-[25px] max-h-[25px] hover:-translate-y-2 my-1 medium:my-4 bg-bluee-500 drop-shadow-[0px_0px_15px_white] transition-[transform_filter] duration-300 flex justify-center items-center bg-bluee-500 ">{tecno.img}</div>
                     ))}
                 </div>
-                <ul className="min-w-[100px] flex justify-end items-center space-x-5 bg-redd-500">
+                <ul className="w-full sm:min-w-[100px] flex justify-center sm:justify-end items-center space-x-5 bg-redd-500">
                     {proyect.web && 
                     <ButtonLink text={"Sitio Web"} icon="bx bx-world" link={proyect.web}/>} 
             
