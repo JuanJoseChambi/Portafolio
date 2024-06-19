@@ -3,7 +3,8 @@ export interface Proyects {
     status:string;
     titulo: string;
     fecha: string;
-    github?: null | string;
+    githubFront?: null | string;
+    githubBack?: null | string;
     web?: null | string;
     image: string;
     gridArea: string;

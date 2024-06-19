@@ -1,34 +1,39 @@
 import MMarket from "../../assets/main/Proeyctos/MMarket.svg";
 // import RecipeFood from "../../assets/main/Proeyctos/RecipeFood.png";
 // import JCDV from "../../assets/main/Proeyctos/JCDV.svg";
-import ProductoAPI from "../../assets/main/Proeyctos/ProductAPI.png";
-import Tn from "../../assets/main/Proeyctos/Tn.png";
+// import ProductoAPI from "../../assets/main/Proeyctos/ProductAPI.png";
+import ProductsAPI from "../../assets/main/Proeyctos/ProductsApi.png";
+// import Tn from "../../assets/main/Proeyctos/Tn.png";
+// import Versa from "../../assets/main/Proeyctos/Versa.png";
+import Versa from "../../assets/main/Proeyctos/Versa.png";
+import Tn from "../../assets/main/Proeyctos/TNPC.png";
 import { Proyects } from "../../interfaces/interfaces";
 
 export const proyectsData : Proyects[] = [
-    // {
-    //   tecnologias: [
-    //     "HTML",
-    //     "REACT",
-    //     "TYPESCRIPT",
-    //     "REDUX",
-    //     "TAILWIND",
-    //     "NODE",
-    //     "EXPRESS",
-    //     "POSTGRESQL",
-    //     "JAVASCRIPT",
-    //     "GITHUB",
-    //     "GIT"
-    //   ],
-    //   status:"Desactivo",
-    //   titulo: "JCDV",
-    //   fecha: "26 - Oct - 13 Nov - 2023",
-    //   github: "https://github.com/JuanJoseChambi/IJCDV",
-    //   web: null,
-    //   image: JCDV,
-    //   gridArea: "bigTopLeft",
-    //   descripcion: "JCDV (Jesús Camino De Vida) es un proyecto que se centró en la aplicación práctica de nuevas tecnologías. Aunque, por el momento, solo se cuenta con la sección de inicio, esta etapa ha sido fundamental para consolidar y adquirir conocimientos y destrezas en el uso de la tecnología Tailwind, la cual he venido empleando desde ese momento.",
-    // },
+    {
+      tecnologias: [
+        "HTML",
+        "REACT",
+        "TYPESCRIPT",
+        "REDUX",
+        "TAILWIND",
+        "NODE",
+        "EXPRESS",
+        "POSTGRESQL",
+        "JAVASCRIPT",
+        "GITHUB",
+        "GIT"
+      ],
+      status:"Activo",
+      titulo: "Versa",
+      fecha: "28 Feb - En Proceso - 2023",
+      githubFront: "https://github.com/JuanJoseChambi/versa-shop",
+      githubBack: "https://github.com/JuanJoseChambi/e-commerce-backend",
+      web: "https://versa-shop-five.vercel.app/shop",
+      image: Versa,
+      gridArea: "bigTopLeft",
+      descripcion: "JCDV (Jesús Camino De Vida) es un proyecto que se centró en la aplicación práctica de nuevas tecnologías. Aunque, por el momento, solo se cuenta con la sección de inicio, esta etapa ha sido fundamental para consolidar y adquirir conocimientos y destrezas en el uso de la tecnología Tailwind, la cual he venido empleando desde ese momento.",
+    },
     {
       tecnologias: [
         "HTML",
@@ -44,9 +49,9 @@ export const proyectsData : Proyects[] = [
       status:"Activo",
       titulo: "Products ApI",
       fecha: "1 Nov - 14 Feb 2023/2024",
-      github: "https://github.com/JuanJoseChambi/product-api",
+      githubFront: "https://github.com/JuanJoseChambi/product-api",
       web: "https://product-api-mu-seven.vercel.app/",
-      image: ProductoAPI,
+      image: ProductsAPI,
       gridArea: "bigTopRight",
       short: true,
       descripcion: "Products API es una plataforma de desarrollo web que ofrece una API gratuita especialmente diseñada para proyectos E-commerce. Además de proporcionar datos esenciales para tu proyecto, se destaca como una herramienta de documentación integral para desarrolladores. Este servicio va más allá de simplemente suministrar información; brinda oportunidades valiosas para practicar y perfeccionar habilidades en áreas cruciales como autenticación, billeteras virtuales y seguridad. <br><br> En resumen, Products API se presenta como una solución integral y versátil para aquellos que buscan no solo acceder a una API de productos, sino también potenciar sus habilidades de desarrollo web.",
@@ -82,7 +87,7 @@ export const proyectsData : Proyects[] = [
       status:"Activo",
       titulo: "TN",
       fecha: "09 Oct - 24 Oct - 2023",
-      github: "https://github.com/JuanJoseChambi/T-N",
+      githubFront: "https://github.com/JuanJoseChambi/T-N",
       web: "https://t-n-chi.vercel.app/",
       image: Tn,
       gridArea: "bigBotCenter",
@@ -127,7 +132,7 @@ export const proyectsData : Proyects[] = [
       status:"Activo",
       titulo: "MMarket",
       fecha: "20 Jul - 30 Ago - 2023",
-      github: "https://github.com/JuanJoseChambi/M-Market",
+      githubFront: "https://github.com/JuanJoseChambi/M-Market",
       web: "https://m-market-iota.vercel.app/home",
       image: MMarket,
       gridArea: "minBotRight",
