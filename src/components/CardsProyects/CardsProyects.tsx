@@ -2,7 +2,7 @@ import { tecnologias } from "../../assets/Tecnologias"
 import ButtonLink from "../ButtonLink/ButtonLink"
 import { Proyects, arrayTecnologias } from "../../interfaces/interfaces"
 import { useEffect, useState } from "react"
-import OptionsAcordeon from "../OptionsAcordeon/OptionsAcordeon"
+// import OptionsAcordeon from "../OptionsAcordeon/OptionsAcordeon"
 // import Tooltip from "../Tooltip/Tooltip"
 
 interface CardsProyectsProp {
@@ -11,7 +11,7 @@ interface CardsProyectsProp {
 
 function CardsProyects({proyect, }:CardsProyectsProp) {
     const [tecnologiasProyecto, setTecnologiasProyecto] = useState<arrayTecnologias[]>([])
-    const [openGithub, setOpenGithub] = useState<string | null>(null)
+    // const [openGithub, setOpenGithub] = useState<string | null>(null)
 
     useEffect(() => {
     const tec = tecnologias.filter(infoTec => proyect.tecnologias.some(nameTec => nameTec === infoTec.nombre));
