@@ -26,13 +26,13 @@ export const proyectsData : Proyects[] = [
       ],
       status:"Activo",
       titulo: "Versa",
-      fecha: "28 Feb - En Proceso - 2023",
+      fecha: "28 Feb - 1 Ago - 2024",
       githubFront: "https://github.com/JuanJoseChambi/versa-shop",
       githubBack: "https://github.com/JuanJoseChambi/e-commerce-backend",
       web: "https://versa-shop-five.vercel.app/shop",
       image: Versa,
       gridArea: "bigTopLeft",
-      descripcion: "JCDV (Jesús Camino De Vida) es un proyecto que se centró en la aplicación práctica de nuevas tecnologías. Aunque, por el momento, solo se cuenta con la sección de inicio, esta etapa ha sido fundamental para consolidar y adquirir conocimientos y destrezas en el uso de la tecnología Tailwind, la cual he venido empleando desde ese momento.",
+      descripcion: "Versa es un sitio web e-commerce especializada en moda, diseñada para ofrecer una experiencia de compra en línea intuitiva y atractiva. Este proyecto combina diseño moderno, funcionalidad robusta y una experiencia de usuario fluida",
     },
     {
       tecnologias: [
